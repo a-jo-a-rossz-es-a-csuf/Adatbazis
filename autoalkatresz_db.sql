@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Feb 18. 10:47
--- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.2.12
+-- Létrehozás ideje: 2026. Már 27. 12:02
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,134 +48,178 @@ CREATE TABLE `alkatreszek` (
 --
 
 INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `ar`, `akcios_ar`, `keszlet`, `gyarto`, `oe_szam`, `kep_url`, `aktiv`, `letrehozva`) VALUES
-(1, 'BMW-1E87-FB01', 'Elso fekbetet BMW 1-es E87', NULL, 2, 14900.00, NULL, 35, 'TRW', '34116780711', NULL, 1, '2026-02-18 09:04:44'),
-(2, 'BMW-1E87-FT01', 'Elso fektarcsa BMW 1-es E87', NULL, 3, 24900.00, NULL, 20, 'Brembo', '34116855781', NULL, 1, '2026-02-18 09:04:44'),
-(3, 'BMW-1E87-OS01', 'Olajszuro BMW 1-es E87', NULL, 5, 2990.00, NULL, 80, 'Mann', '11427508969', NULL, 1, '2026-02-18 09:04:44'),
-(4, 'BMW-1E87-LS01', 'Legszuro BMW 1-es E87', NULL, 6, 4490.00, NULL, 55, 'Mahle', '13717798331', NULL, 1, '2026-02-18 09:04:44'),
-(5, 'BMW-1F20-FB01', 'Elso fekbetet BMW 1-es F20', NULL, 2, 16900.00, NULL, 40, 'ATE', '34116858910', NULL, 1, '2026-02-18 09:04:44'),
-(6, 'BMW-1F20-FT01', 'Elso fektarcsa BMW 1-es F20', NULL, 3, 28900.00, NULL, 25, 'Brembo', '34116792223', NULL, 1, '2026-02-18 09:04:44'),
-(7, 'BMW-1F20-OS01', 'Olajszuro BMW 1-es F20', NULL, 5, 3290.00, NULL, 90, 'Mann', '11428683196', NULL, 1, '2026-02-18 09:04:44'),
-(8, 'BMW-1F20-LS01', 'Legszuro BMW 1-es F20', NULL, 6, 4990.00, NULL, 60, 'K&N', '13718507320', NULL, 1, '2026-02-18 09:04:44'),
-(9, 'BMW-3E46-FB01', 'Elso fekbetet BMW 3-as E46', NULL, 2, 15900.00, NULL, 45, 'TRW', '34116761244', NULL, 1, '2026-02-18 09:04:44'),
-(10, 'BMW-3E46-FT01', 'Elso fektarcsa BMW 3-as E46', NULL, 3, 22900.00, NULL, 30, 'Zimmermann', '34116855153', NULL, 1, '2026-02-18 09:04:44'),
-(11, 'BMW-3E46-LC01', 'Lengescsillapito elso BMW 3-as E46', NULL, 9, 26900.00, NULL, 18, 'Bilstein', '31316759090', NULL, 1, '2026-02-18 09:04:44'),
-(12, 'BMW-3E46-OS01', 'Olajszuro BMW 3-as E46', NULL, 5, 2490.00, NULL, 100, 'Mann', '11421427908', NULL, 1, '2026-02-18 09:04:44'),
-(13, 'BMW-3E90-FB01', 'Elso fekbetet BMW 3-as E90', NULL, 2, 18900.00, NULL, 50, 'Brembo', '34116763617', NULL, 1, '2026-02-18 09:04:44'),
-(14, 'BMW-3E90-FT01', 'Elso fektarcsa BMW 3-as E90', NULL, 3, 32900.00, NULL, 22, 'Brembo', '34116854998', NULL, 1, '2026-02-18 09:04:44'),
-(15, 'BMW-3E90-LC01', 'Lengescsillapito elso BMW 3-as E90', NULL, 9, 32900.00, NULL, 15, 'Sachs', '31316786005', NULL, 1, '2026-02-18 09:04:44'),
-(16, 'BMW-3E90-OS01', 'Olajszuro BMW 3-as E90', NULL, 5, 3290.00, NULL, 85, 'Mann', '11427566327', NULL, 1, '2026-02-18 09:04:44'),
-(17, 'BMW-3E90-LS01', 'Legszuro BMW 3-as E90', NULL, 6, 5490.00, NULL, 45, 'Mann', '13717797465', NULL, 1, '2026-02-18 09:04:44'),
-(18, 'BMW-3E90-GY01', 'Gyujtagyertya BMW 3-as E90 4db', NULL, 7, 12900.00, NULL, 60, 'NGK', '12120037607', NULL, 1, '2026-02-18 09:04:44'),
-(19, 'BMW-3F30-FB01', 'Elso fekbetet BMW 3-as F30', NULL, 2, 19900.00, NULL, 55, 'TRW', '34116850568', NULL, 1, '2026-02-18 09:04:44'),
-(20, 'BMW-3F30-FB02', 'Hatso fekbetet BMW 3-as F30', NULL, 2, 14900.00, NULL, 48, 'ATE', '34216873093', NULL, 1, '2026-02-18 09:04:44'),
-(21, 'BMW-3F30-FT01', 'Elso fektarcsa BMW 3-as F30', NULL, 3, 34900.00, NULL, 20, 'Brembo', '34106859182', NULL, 1, '2026-02-18 09:04:44'),
-(22, 'BMW-3F30-LC01', 'Lengescsillapito elso BMW 3-as F30', NULL, 9, 35900.00, NULL, 12, 'Bilstein', '31316851335', NULL, 1, '2026-02-18 09:04:44'),
-(23, 'BMW-3F30-OS01', 'Olajszuro BMW 3-as F30', NULL, 5, 3490.00, NULL, 95, 'Mann', '11428683196', NULL, 1, '2026-02-18 09:04:44'),
-(24, 'BMW-3F30-LS01', 'Legszuro BMW 3-as F30', NULL, 6, 5990.00, NULL, 50, 'K&N', '13718507320', NULL, 1, '2026-02-18 09:04:44'),
-(25, 'BMW-3F30-GY01', 'Gyujtagyertya BMW 3-as F30 4db', NULL, 7, 15900.00, NULL, 55, 'Bosch', '12120039664', NULL, 1, '2026-02-18 09:04:44'),
-(26, 'BMW-3F30-VS01', 'Vizszivattyu BMW 3-as F30', NULL, 13, 28900.00, NULL, 18, 'Graf', '11517597715', NULL, 1, '2026-02-18 09:04:44'),
-(27, 'BMW-3G20-FB01', 'Elso fekbetet BMW 3-as G20', NULL, 2, 22900.00, NULL, 40, 'Brembo', '34106888459', NULL, 1, '2026-02-18 09:04:44'),
-(28, 'BMW-3G20-FT01', 'Elso fektarcsa BMW 3-as G20', NULL, 3, 38900.00, NULL, 18, 'Zimmermann', '34106888457', NULL, 1, '2026-02-18 09:04:44'),
-(29, 'BMW-3G20-OS01', 'Olajszuro BMW 3-as G20', NULL, 5, 3990.00, NULL, 70, 'Mann', '11428575211', NULL, 1, '2026-02-18 09:04:44'),
-(30, 'BMW-3G20-LS01', 'Legszuro BMW 3-as G20', NULL, 6, 6490.00, NULL, 42, 'Mahle', '13718577171', NULL, 1, '2026-02-18 09:04:44'),
-(31, 'BMW-5E39-FB01', 'Elso fekbetet BMW 5-os E39', NULL, 2, 16900.00, NULL, 38, 'TRW', '34116761252', NULL, 1, '2026-02-18 09:04:44'),
-(32, 'BMW-5E39-FT01', 'Elso fektarcsa BMW 5-os E39', NULL, 3, 28900.00, NULL, 22, 'Brembo', '34111163153', NULL, 1, '2026-02-18 09:04:44'),
-(33, 'BMW-5E39-LC01', 'Lengescsillapito elso BMW 5-os E39', NULL, 9, 28900.00, NULL, 16, 'Monroe', '31311096857', NULL, 1, '2026-02-18 09:04:44'),
-(34, 'BMW-5E39-OS01', 'Olajszuro BMW 5-os E39', NULL, 5, 2790.00, NULL, 75, 'Mann', '11421427908', NULL, 1, '2026-02-18 09:04:44'),
-(35, 'BMW-5E60-FB01', 'Elso fekbetet BMW 5-os E60', NULL, 2, 19900.00, NULL, 42, 'ATE', '34116763617', NULL, 1, '2026-02-18 09:04:44'),
-(36, 'BMW-5E60-FT01', 'Elso fektarcsa BMW 5-os E60', NULL, 3, 34900.00, NULL, 20, 'Brembo', '34116763824', NULL, 1, '2026-02-18 09:04:44'),
-(37, 'BMW-5E60-LC01', 'Lengescsillapito elso BMW 5-os E60', NULL, 9, 34900.00, NULL, 14, 'Bilstein', '31316780186', NULL, 1, '2026-02-18 09:04:44'),
-(38, 'BMW-5E60-OS01', 'Olajszuro BMW 5-os E60', NULL, 5, 3190.00, NULL, 82, 'Mann', '11427566327', NULL, 1, '2026-02-18 09:04:44'),
-(39, 'BMW-5F10-FB01', 'Elso fekbetet BMW 5-os F10', NULL, 2, 24900.00, NULL, 38, 'Brembo', '34116851269', NULL, 1, '2026-02-18 09:04:44'),
-(40, 'BMW-5F10-FT01', 'Elso fektarcsa BMW 5-os F10', NULL, 3, 42900.00, NULL, 16, 'Zimmermann', '34116794429', NULL, 1, '2026-02-18 09:04:44'),
-(41, 'BMW-5F10-LC01', 'Lengescsillapito elso BMW 5-os F10', NULL, 9, 38900.00, NULL, 12, 'Sachs', '31316789363', NULL, 1, '2026-02-18 09:04:44'),
-(42, 'BMW-5F10-OS01', 'Olajszuro BMW 5-os F10', NULL, 5, 3590.00, NULL, 78, 'Mann', '11428683196', NULL, 1, '2026-02-18 09:04:44'),
-(43, 'BMW-5F10-GY01', 'Gyujtagyertya BMW 5-os F10 6db', NULL, 7, 23900.00, NULL, 35, 'NGK', '12120039664', NULL, 1, '2026-02-18 09:04:44'),
-(44, 'BMW-X5G05-FB01', 'Elso fekbetet BMW X5 G05', NULL, 2, 32900.00, NULL, 25, 'Brembo', '34106888459', NULL, 1, '2026-02-18 09:04:44'),
-(45, 'BMW-X5G05-FT01', 'Elso fektarcsa BMW X5 G05', NULL, 3, 54900.00, NULL, 14, 'Brembo', '34106888457', NULL, 1, '2026-02-18 09:04:44'),
-(46, 'BMW-X5G05-OS01', 'Olajszuro BMW X5 G05', NULL, 5, 4290.00, NULL, 55, 'Mann', '11428575211', NULL, 1, '2026-02-18 09:04:44'),
-(47, 'AUDI-A38P-FB01', 'Elso fekbetet Audi A3 8P', NULL, 2, 15900.00, NULL, 48, 'TRW', '1K0698151', NULL, 1, '2026-02-18 09:04:44'),
-(48, 'AUDI-A38P-FT01', 'Elso fektarcsa Audi A3 8P', NULL, 3, 24900.00, NULL, 28, 'Brembo', '1K0615301AA', NULL, 1, '2026-02-18 09:04:44'),
-(49, 'AUDI-A38P-OS01', 'Olajszuro Audi A3 8P', NULL, 5, 2890.00, NULL, 90, 'Mann', '06D115562', NULL, 1, '2026-02-18 09:04:44'),
-(50, 'AUDI-A38P-LS01', 'Legszuro Audi A3 8P', NULL, 6, 3990.00, NULL, 65, 'Mahle', '1K0129620D', NULL, 1, '2026-02-18 09:04:44'),
-(51, 'AUDI-A38V-FB01', 'Elso fekbetet Audi A3 8V', NULL, 2, 17900.00, NULL, 42, 'ATE', '5Q0698151', NULL, 1, '2026-02-18 09:04:44'),
-(52, 'AUDI-A38V-FT01', 'Elso fektarcsa Audi A3 8V', NULL, 3, 28900.00, NULL, 24, 'Zimmermann', '5Q0615301F', NULL, 1, '2026-02-18 09:04:44'),
-(53, 'AUDI-A38V-OS01', 'Olajszuro Audi A3 8V', NULL, 5, 3190.00, NULL, 85, 'Mann', '06L115562', NULL, 1, '2026-02-18 09:04:44'),
-(54, 'AUDI-A38V-LS01', 'Legszuro Audi A3 8V', NULL, 6, 4490.00, NULL, 58, 'K&N', '5Q0129620B', NULL, 1, '2026-02-18 09:04:44'),
-(55, 'AUDI-A4B8-FB01', 'Elso fekbetet Audi A4 B8', NULL, 2, 19900.00, NULL, 45, 'TRW', '8K0698151', NULL, 1, '2026-02-18 09:04:44'),
-(56, 'AUDI-A4B8-FB02', 'Hatso fekbetet Audi A4 B8', NULL, 2, 15900.00, NULL, 40, 'ATE', '8K0698451', NULL, 1, '2026-02-18 09:04:44'),
-(57, 'AUDI-A4B8-FT01', 'Elso fektarcsa Audi A4 B8', NULL, 3, 32900.00, NULL, 22, 'Brembo', '8K0615301', NULL, 1, '2026-02-18 09:04:44'),
-(58, 'AUDI-A4B8-LC01', 'Lengescsillapito elso Audi A4 B8', NULL, 9, 32900.00, NULL, 16, 'Bilstein', '8K0413031', NULL, 1, '2026-02-18 09:04:44'),
-(59, 'AUDI-A4B8-OS01', 'Olajszuro Audi A4 B8', NULL, 5, 3290.00, NULL, 88, 'Mann', '06L115562', NULL, 1, '2026-02-18 09:04:44'),
-(60, 'AUDI-A4B8-LS01', 'Legszuro Audi A4 B8', NULL, 6, 4990.00, NULL, 52, 'Mahle', '8K0133843', NULL, 1, '2026-02-18 09:04:44'),
-(61, 'AUDI-A4B8-GY01', 'Gyujtagyertya Audi A4 B8 4db', NULL, 7, 14900.00, NULL, 48, 'NGK', '06H905611', NULL, 1, '2026-02-18 09:04:44'),
-(62, 'AUDI-A4B9-FB01', 'Elso fekbetet Audi A4 B9', NULL, 2, 21900.00, NULL, 40, 'Brembo', '8W0698151', NULL, 1, '2026-02-18 09:04:44'),
-(63, 'AUDI-A4B9-FT01', 'Elso fektarcsa Audi A4 B9', NULL, 3, 36900.00, NULL, 20, 'Zimmermann', '8W0615301', NULL, 1, '2026-02-18 09:04:44'),
-(64, 'AUDI-A4B9-OS01', 'Olajszuro Audi A4 B9', NULL, 5, 3590.00, NULL, 82, 'Mann', '06L115562B', NULL, 1, '2026-02-18 09:04:44'),
-(65, 'AUDI-A4B9-LS01', 'Legszuro Audi A4 B9', NULL, 6, 5290.00, NULL, 48, 'K&N', '8W0133843', NULL, 1, '2026-02-18 09:04:44'),
-(66, 'AUDI-A6C7-FB01', 'Elso fekbetet Audi A6 C7', NULL, 2, 24900.00, NULL, 35, 'TRW', '4G0698151', NULL, 1, '2026-02-18 09:04:44'),
-(67, 'AUDI-A6C7-FT01', 'Elso fektarcsa Audi A6 C7', NULL, 3, 42900.00, NULL, 18, 'Brembo', '4G0615301H', NULL, 1, '2026-02-18 09:04:44'),
-(68, 'AUDI-A6C7-LC01', 'Lengescsillapito elso Audi A6 C7', NULL, 9, 38900.00, NULL, 14, 'Sachs', '4G0413031', NULL, 1, '2026-02-18 09:04:44'),
-(69, 'AUDI-A6C7-OS01', 'Olajszuro Audi A6 C7', NULL, 5, 3890.00, NULL, 72, 'Mann', '06E115562H', NULL, 1, '2026-02-18 09:04:44'),
-(70, 'AUDI-Q5FY-FB01', 'Elso fekbetet Audi Q5 FY', NULL, 2, 26900.00, NULL, 32, 'Brembo', '80A698151', NULL, 1, '2026-02-18 09:04:44'),
-(71, 'AUDI-Q5FY-FT01', 'Elso fektarcsa Audi Q5 FY', NULL, 3, 48900.00, NULL, 16, 'Zimmermann', '80A615301', NULL, 1, '2026-02-18 09:04:44'),
-(72, 'AUDI-Q5FY-OS01', 'Olajszuro Audi Q5 FY', NULL, 5, 4190.00, NULL, 65, 'Mann', '06L115562', NULL, 1, '2026-02-18 09:04:44'),
-(73, 'MB-AW176-FB01', 'Elso fekbetet Mercedes A W176', NULL, 2, 18900.00, NULL, 40, 'TRW', 'A0004206900', NULL, 1, '2026-02-18 09:04:44'),
-(74, 'MB-AW176-FT01', 'Elso fektarcsa Mercedes A W176', NULL, 3, 29900.00, NULL, 24, 'Brembo', 'A2464210012', NULL, 1, '2026-02-18 09:04:44'),
-(75, 'MB-AW176-OS01', 'Olajszuro Mercedes A W176', NULL, 5, 3290.00, NULL, 75, 'Mann', 'A2701800009', NULL, 1, '2026-02-18 09:04:44'),
-(76, 'MB-AW176-LS01', 'Legszuro Mercedes A W176', NULL, 6, 4690.00, NULL, 55, 'Mahle', 'A2700940004', NULL, 1, '2026-02-18 09:04:44'),
-(77, 'MB-CW205-FB01', 'Elso fekbetet Mercedes C W205', NULL, 2, 22900.00, NULL, 38, 'Brembo', 'A0004207800', NULL, 1, '2026-02-18 09:04:44'),
-(78, 'MB-CW205-FB02', 'Hatso fekbetet Mercedes C W205', NULL, 2, 18900.00, NULL, 35, 'ATE', 'A0004207900', NULL, 1, '2026-02-18 09:04:44'),
-(79, 'MB-CW205-FT01', 'Elso fektarcsa Mercedes C W205', NULL, 3, 38900.00, NULL, 20, 'Zimmermann', 'A2054210012', NULL, 1, '2026-02-18 09:04:44'),
-(80, 'MB-CW205-LC01', 'Lengescsillapito elso Mercedes C W205', NULL, 9, 35900.00, NULL, 14, 'Sachs', 'A2053200030', NULL, 1, '2026-02-18 09:04:44'),
-(81, 'MB-CW205-OS01', 'Olajszuro Mercedes C W205', NULL, 5, 3590.00, NULL, 78, 'Mann', 'A2701800109', NULL, 1, '2026-02-18 09:04:44'),
-(82, 'MB-CW205-LS01', 'Legszuro Mercedes C W205', NULL, 6, 5290.00, NULL, 50, 'Mahle', 'A2740940004', NULL, 1, '2026-02-18 09:04:44'),
-(83, 'MB-CW205-GY01', 'Gyujtagyertya Mercedes C W205 4db', NULL, 7, 16900.00, NULL, 42, 'Bosch', 'A0041596403', NULL, 1, '2026-02-18 09:04:44'),
-(84, 'MB-EW213-FB01', 'Elso fekbetet Mercedes E W213', NULL, 2, 26900.00, NULL, 32, 'TRW', 'A0004208400', NULL, 1, '2026-02-18 09:04:44'),
-(85, 'MB-EW213-FT01', 'Elso fektarcsa Mercedes E W213', NULL, 3, 46900.00, NULL, 18, 'Brembo', 'A2134210012', NULL, 1, '2026-02-18 09:04:44'),
-(86, 'MB-EW213-LC01', 'Lengescsillapito elso Mercedes E W213', NULL, 9, 42900.00, NULL, 12, 'Bilstein', 'A2133200030', NULL, 1, '2026-02-18 09:04:44'),
-(87, 'MB-EW213-OS01', 'Olajszuro Mercedes E W213', NULL, 5, 3990.00, NULL, 70, 'Mann', 'A2761800009', NULL, 1, '2026-02-18 09:04:44'),
-(88, 'MB-GLCX253-FB01', 'Elso fekbetet Mercedes GLC X253', NULL, 2, 28900.00, NULL, 30, 'Brembo', 'A0004207200', NULL, 1, '2026-02-18 09:04:44'),
-(89, 'MB-GLCX253-FT01', 'Elso fektarcsa Mercedes GLC X253', NULL, 3, 52900.00, NULL, 15, 'Zimmermann', 'A2534210012', NULL, 1, '2026-02-18 09:04:44'),
-(90, 'MB-GLCX253-OS01', 'Olajszuro Mercedes GLC X253', NULL, 5, 4290.00, NULL, 62, 'Mann', 'A2761800009', NULL, 1, '2026-02-18 09:04:44'),
-(91, 'MAN-TGX-FB01', 'Elso fekbetet MAN TGX', NULL, 14, 45900.00, NULL, 25, 'Knorr-Bremse', '81508206086', NULL, 1, '2026-02-18 09:04:44'),
-(92, 'MAN-TGX-FT01', 'Fektarcsa MAN TGX', NULL, 14, 89900.00, NULL, 18, 'Wabco', '81508030038', NULL, 1, '2026-02-18 09:04:44'),
-(93, 'MAN-TGX-OS01', 'Olajszuro MAN TGX D26', NULL, 14, 8900.00, NULL, 45, 'Mann', '51055040107', NULL, 1, '2026-02-18 09:04:44'),
-(94, 'MAN-TGX-LS01', 'Legszuro MAN TGX', NULL, 14, 12900.00, NULL, 38, 'Mahle', '81084050020', NULL, 1, '2026-02-18 09:04:44'),
-(95, 'MAN-TGX-US01', 'Uzemanyagszuro MAN TGX', NULL, 14, 9900.00, NULL, 50, 'Mann', '51125030066', NULL, 1, '2026-02-18 09:04:44'),
-(96, 'MAN-TGS-FB01', 'Elso fekbetet MAN TGS', NULL, 14, 42900.00, NULL, 28, 'Knorr-Bremse', '81508206085', NULL, 1, '2026-02-18 09:04:44'),
-(97, 'MAN-TGS-LC01', 'Lengescsillapito MAN TGS', NULL, 14, 65900.00, NULL, 15, 'Sachs', '81437016946', NULL, 1, '2026-02-18 09:04:44'),
-(98, 'MAN-TGS-OS01', 'Olajszuro MAN TGS', NULL, 14, 7900.00, NULL, 52, 'Mann', '51055040105', NULL, 1, '2026-02-18 09:04:44'),
-(99, 'SCAN-R-FB01', 'Elso fekbetet Scania R', NULL, 14, 48900.00, NULL, 22, 'Knorr-Bremse', '1535490', NULL, 1, '2026-02-18 09:04:44'),
-(100, 'SCAN-R-FT01', 'Fektarcsa Scania R', NULL, 14, 95900.00, NULL, 15, 'Wabco', '1402272', NULL, 1, '2026-02-18 09:04:44'),
-(101, 'SCAN-R-OS01', 'Olajszuro Scania R DC13', NULL, 14, 9900.00, NULL, 40, 'Mann', '2022275', NULL, 1, '2026-02-18 09:04:44'),
-(102, 'SCAN-R-LS01', 'Legszuro Scania R', NULL, 14, 14900.00, NULL, 35, 'Mahle', '1869993', NULL, 1, '2026-02-18 09:04:44'),
-(103, 'SCAN-R-US01', 'Uzemanyagszuro Scania R', NULL, 14, 11900.00, NULL, 42, 'Mann', '1873018', NULL, 1, '2026-02-18 09:04:44'),
-(104, 'SCAN-S-FB01', 'Elso fekbetet Scania S', NULL, 14, 52900.00, NULL, 20, 'Knorr-Bremse', '2195220', NULL, 1, '2026-02-18 09:04:44'),
-(105, 'SCAN-S-LC01', 'Lengescsillapito Scania S', NULL, 14, 72900.00, NULL, 12, 'Sachs', '2195110', NULL, 1, '2026-02-18 09:04:44'),
-(106, 'HON-CBR6-FB01', 'Elso fekbetet Honda CBR600RR', NULL, 15, 18900.00, NULL, 30, 'EBC', '06455-MFJ-D01', NULL, 1, '2026-02-18 09:04:44'),
-(107, 'HON-CBR6-FT01', 'Elso fektarcsa Honda CBR600RR', NULL, 15, 32900.00, NULL, 18, 'Brembo', '45120-MFJ-D01', NULL, 1, '2026-02-18 09:04:44'),
-(108, 'HON-CBR6-OS01', 'Olajszuro Honda CBR600RR', NULL, 15, 2490.00, NULL, 65, 'HiFlo', '15410-MFJ-D01', NULL, 1, '2026-02-18 09:04:44'),
-(109, 'HON-CBR6-LS01', 'Legszuro Honda CBR600RR', NULL, 15, 4290.00, NULL, 45, 'K&N', '17210-MFJ-D00', NULL, 1, '2026-02-18 09:04:44'),
-(110, 'HON-CBR10-FB01', 'Elso fekbetet Honda CBR1000RR', NULL, 15, 22900.00, NULL, 28, 'EBC', '06455-MKF-D01', NULL, 1, '2026-02-18 09:04:44'),
-(111, 'HON-CBR10-FT01', 'Elso fektarcsa Honda CBR1000RR', NULL, 15, 38900.00, NULL, 15, 'Brembo', '45120-MKF-D01', NULL, 1, '2026-02-18 09:04:44'),
-(112, 'HON-CBR10-OS01', 'Olajszuro Honda CBR1000RR', NULL, 15, 2890.00, NULL, 58, 'HiFlo', '15410-MKF-D01', NULL, 1, '2026-02-18 09:04:44'),
-(113, 'HON-CB5-FB01', 'Elso fekbetet Honda CB500F', NULL, 15, 12900.00, NULL, 38, 'EBC', '06455-MGZ-J01', NULL, 1, '2026-02-18 09:04:44'),
-(114, 'HON-CB5-OS01', 'Olajszuro Honda CB500F', NULL, 15, 1990.00, NULL, 72, 'HiFlo', '15410-MGZ-D01', NULL, 1, '2026-02-18 09:04:44'),
-(115, 'HON-AFT-FB01', 'Elso fekbetet Honda Africa Twin', NULL, 15, 16900.00, NULL, 32, 'EBC', '06455-MKK-D01', NULL, 1, '2026-02-18 09:04:44'),
-(116, 'HON-AFT-OS01', 'Olajszuro Honda Africa Twin', NULL, 15, 2690.00, NULL, 55, 'HiFlo', '15410-MKK-D01', NULL, 1, '2026-02-18 09:04:44'),
-(117, 'HON-AFT-LS01', 'Legszuro Honda Africa Twin', NULL, 15, 5490.00, NULL, 40, 'K&N', '17210-MKK-D00', NULL, 1, '2026-02-18 09:04:44'),
-(118, 'YAM-R6-FB01', 'Elso fekbetet Yamaha YZF-R6', NULL, 15, 19900.00, NULL, 28, 'EBC', '2C0-W0045-00', NULL, 1, '2026-02-18 09:04:44'),
-(119, 'YAM-R6-FT01', 'Elso fektarcsa Yamaha YZF-R6', NULL, 15, 34900.00, NULL, 16, 'Brembo', '2C0-2581T-00', NULL, 1, '2026-02-18 09:04:44'),
-(120, 'YAM-R6-OS01', 'Olajszuro Yamaha YZF-R6', NULL, 15, 2290.00, NULL, 62, 'HiFlo', '5GH-13440-50', NULL, 1, '2026-02-18 09:04:44'),
-(121, 'YAM-R1-FB01', 'Elso fekbetet Yamaha YZF-R1', NULL, 15, 24900.00, NULL, 25, 'EBC', 'B67-W0045-00', NULL, 1, '2026-02-18 09:04:44'),
-(122, 'YAM-R1-FT01', 'Elso fektarcsa Yamaha YZF-R1', NULL, 15, 42900.00, NULL, 14, 'Brembo', 'B67-2581T-00', NULL, 1, '2026-02-18 09:04:44'),
-(123, 'YAM-R1-OS01', 'Olajszuro Yamaha YZF-R1', NULL, 15, 2590.00, NULL, 55, 'HiFlo', '5GH-13440-60', NULL, 1, '2026-02-18 09:04:44'),
-(124, 'YAM-MT7-FB01', 'Elso fekbetet Yamaha MT-07', NULL, 15, 14900.00, NULL, 35, 'EBC', '1WS-W0045-00', NULL, 1, '2026-02-18 09:04:44'),
-(125, 'YAM-MT7-OS01', 'Olajszuro Yamaha MT-07', NULL, 15, 1890.00, NULL, 70, 'HiFlo', '5GH-13440-30', NULL, 1, '2026-02-18 09:04:44'),
-(126, 'YAM-MT9-FB01', 'Elso fekbetet Yamaha MT-09', NULL, 15, 16900.00, NULL, 32, 'EBC', 'B4C-W0045-00', NULL, 1, '2026-02-18 09:04:44'),
-(127, 'YAM-MT9-FT01', 'Elso fektarcsa Yamaha MT-09', NULL, 15, 29900.00, NULL, 20, 'Brembo', 'B4C-2581T-00', NULL, 1, '2026-02-18 09:04:44'),
-(128, 'YAM-MT9-OS01', 'Olajszuro Yamaha MT-09', NULL, 15, 2190.00, NULL, 65, 'HiFlo', '5GH-13440-40', NULL, 1, '2026-02-18 09:04:44');
+(1, 'BMW-1E87-FB01', 'Elso fekbetet BMW 1-es E87', NULL, 2, 14900.00, NULL, 35, 'TRW', '34116780711', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(2, 'BMW-1E87-FT01', 'Elso fektarcsa BMW 1-es E87', NULL, 3, 24900.00, NULL, 20, 'Brembo', '34116855781', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(3, 'BMW-1E87-OS01', 'Olajszuro BMW 1-es E87', NULL, 5, 2990.00, NULL, 80, 'Mann', '11427508969', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(4, 'BMW-1E87-LS01', 'Legszuro BMW 1-es E87', NULL, 6, 4490.00, NULL, 55, 'Mahle', '13717798331', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(5, 'BMW-1F20-FB01', 'Elso fekbetet BMW 1-es F20', NULL, 2, 16900.00, NULL, 40, 'ATE', '34116858910', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(6, 'BMW-1F20-FT01', 'Elso fektarcsa BMW 1-es F20', NULL, 3, 28900.00, NULL, 25, 'Brembo', '34116792223', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(7, 'BMW-1F20-OS01', 'Olajszuro BMW 1-es F20', NULL, 5, 3290.00, NULL, 90, 'Mann', '11428683196', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(8, 'BMW-1F20-LS01', 'Legszuro BMW 1-es F20', NULL, 6, 4990.00, NULL, 60, 'K&N', '13718507320', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(9, 'BMW-3E46-FB01', 'Elso fekbetet BMW 3-as E46', NULL, 2, 15900.00, NULL, 45, 'TRW', '34116761244', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(10, 'BMW-3E46-FT01', 'Elso fektarcsa BMW 3-as E46', NULL, 3, 22900.00, NULL, 30, 'Zimmermann', '34116855153', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(11, 'BMW-3E46-LC01', 'Lengescsillapito elso BMW 3-as E46', NULL, 9, 26900.00, NULL, 18, 'Bilstein', '31316759090', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(12, 'BMW-3E46-OS01', 'Olajszuro BMW 3-as E46', NULL, 5, 2490.00, NULL, 100, 'Mann', '11421427908', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(13, 'BMW-3E90-FB01', 'Elso fekbetet BMW 3-as E90', NULL, 2, 18900.00, NULL, 50, 'Brembo', '34116763617', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(14, 'BMW-3E90-FT01', 'Elso fektarcsa BMW 3-as E90', NULL, 3, 32900.00, NULL, 22, 'Brembo', '34116854998', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(15, 'BMW-3E90-LC01', 'Lengescsillapito elso BMW 3-as E90', NULL, 9, 32900.00, NULL, 15, 'Sachs', '31316786005', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(16, 'BMW-3E90-OS01', 'Olajszuro BMW 3-as E90', NULL, 5, 3290.00, NULL, 85, 'Mann', '11427566327', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(17, 'BMW-3E90-LS01', 'Legszuro BMW 3-as E90', NULL, 6, 5490.00, NULL, 45, 'Mann', '13717797465', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(18, 'BMW-3E90-GY01', 'Gyujtagyertya BMW 3-as E90 4db', NULL, 7, 12900.00, NULL, 60, 'NGK', '12120037607', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
+(19, 'BMW-3F30-FB01', 'Elso fekbetet BMW 3-as F30', NULL, 2, 19900.00, NULL, 55, 'TRW', '34116850568', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(20, 'BMW-3F30-FB02', 'Hatso fekbetet BMW 3-as F30', NULL, 2, 14900.00, NULL, 48, 'ATE', '34216873093', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(21, 'BMW-3F30-FT01', 'Elso fektarcsa BMW 3-as F30', NULL, 3, 34900.00, NULL, 20, 'Brembo', '34106859182', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(22, 'BMW-3F30-LC01', 'Lengescsillapito elso BMW 3-as F30', NULL, 9, 35900.00, NULL, 12, 'Bilstein', '31316851335', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(23, 'BMW-3F30-OS01', 'Olajszuro BMW 3-as F30', NULL, 5, 3490.00, NULL, 95, 'Mann', '11428683196', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(24, 'BMW-3F30-LS01', 'Legszuro BMW 3-as F30', NULL, 6, 5990.00, NULL, 50, 'K&N', '13718507320', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(25, 'BMW-3F30-GY01', 'Gyujtagyertya BMW 3-as F30 4db', NULL, 7, 15900.00, NULL, 55, 'Bosch', '12120039664', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
+(26, 'BMW-3F30-VS01', 'Vizszivattyu BMW 3-as F30', NULL, 13, 28900.00, NULL, 18, 'Graf', '11517597715', '/images/parts/vizszivattyu.jpg', 1, '2026-02-18 09:04:44'),
+(27, 'BMW-3G20-FB01', 'Elso fekbetet BMW 3-as G20', NULL, 2, 22900.00, NULL, 40, 'Brembo', '34106888459', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(28, 'BMW-3G20-FT01', 'Elso fektarcsa BMW 3-as G20', NULL, 3, 38900.00, NULL, 18, 'Zimmermann', '34106888457', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(29, 'BMW-3G20-OS01', 'Olajszuro BMW 3-as G20', NULL, 5, 3990.00, NULL, 70, 'Mann', '11428575211', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(30, 'BMW-3G20-LS01', 'Legszuro BMW 3-as G20', NULL, 6, 6490.00, NULL, 42, 'Mahle', '13718577171', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(31, 'BMW-5E39-FB01', 'Elso fekbetet BMW 5-os E39', NULL, 2, 16900.00, NULL, 38, 'TRW', '34116761252', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(32, 'BMW-5E39-FT01', 'Elso fektarcsa BMW 5-os E39', NULL, 3, 28900.00, NULL, 22, 'Brembo', '34111163153', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(33, 'BMW-5E39-LC01', 'Lengescsillapito elso BMW 5-os E39', NULL, 9, 28900.00, NULL, 16, 'Monroe', '31311096857', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(34, 'BMW-5E39-OS01', 'Olajszuro BMW 5-os E39', NULL, 5, 2790.00, NULL, 75, 'Mann', '11421427908', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(35, 'BMW-5E60-FB01', 'Elso fekbetet BMW 5-os E60', NULL, 2, 19900.00, NULL, 42, 'ATE', '34116763617', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(36, 'BMW-5E60-FT01', 'Elso fektarcsa BMW 5-os E60', NULL, 3, 34900.00, NULL, 20, 'Brembo', '34116763824', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(37, 'BMW-5E60-LC01', 'Lengescsillapito elso BMW 5-os E60', NULL, 9, 34900.00, NULL, 14, 'Bilstein', '31316780186', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(38, 'BMW-5E60-OS01', 'Olajszuro BMW 5-os E60', NULL, 5, 3190.00, NULL, 82, 'Mann', '11427566327', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(39, 'BMW-5F10-FB01', 'Elso fekbetet BMW 5-os F10', NULL, 2, 24900.00, NULL, 38, 'Brembo', '34116851269', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(40, 'BMW-5F10-FT01', 'Elso fektarcsa BMW 5-os F10', NULL, 3, 42900.00, NULL, 16, 'Zimmermann', '34116794429', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(41, 'BMW-5F10-LC01', 'Lengescsillapito elso BMW 5-os F10', NULL, 9, 38900.00, NULL, 12, 'Sachs', '31316789363', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(42, 'BMW-5F10-OS01', 'Olajszuro BMW 5-os F10', NULL, 5, 3590.00, NULL, 78, 'Mann', '11428683196', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(43, 'BMW-5F10-GY01', 'Gyujtagyertya BMW 5-os F10 6db', NULL, 7, 23900.00, NULL, 35, 'NGK', '12120039664', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
+(44, 'BMW-X5G05-FB01', 'Elso fekbetet BMW X5 G05', NULL, 2, 32900.00, NULL, 25, 'Brembo', '34106888459', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(45, 'BMW-X5G05-FT01', 'Elso fektarcsa BMW X5 G05', NULL, 3, 54900.00, NULL, 14, 'Brembo', '34106888457', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(46, 'BMW-X5G05-OS01', 'Olajszuro BMW X5 G05', NULL, 5, 4290.00, NULL, 55, 'Mann', '11428575211', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(47, 'AUDI-A38P-FB01', 'Elso fekbetet Audi A3 8P', NULL, 2, 15900.00, NULL, 48, 'TRW', '1K0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(48, 'AUDI-A38P-FT01', 'Elso fektarcsa Audi A3 8P', NULL, 3, 24900.00, NULL, 28, 'Brembo', '1K0615301AA', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(49, 'AUDI-A38P-OS01', 'Olajszuro Audi A3 8P', NULL, 5, 2890.00, NULL, 90, 'Mann', '06D115562', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(50, 'AUDI-A38P-LS01', 'Legszuro Audi A3 8P', NULL, 6, 3990.00, NULL, 65, 'Mahle', '1K0129620D', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(51, 'AUDI-A38V-FB01', 'Elso fekbetet Audi A3 8V', NULL, 2, 17900.00, NULL, 42, 'ATE', '5Q0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(52, 'AUDI-A38V-FT01', 'Elso fektarcsa Audi A3 8V', NULL, 3, 28900.00, NULL, 24, 'Zimmermann', '5Q0615301F', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(53, 'AUDI-A38V-OS01', 'Olajszuro Audi A3 8V', NULL, 5, 3190.00, NULL, 85, 'Mann', '06L115562', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(54, 'AUDI-A38V-LS01', 'Legszuro Audi A3 8V', NULL, 6, 4490.00, NULL, 58, 'K&N', '5Q0129620B', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(55, 'AUDI-A4B8-FB01', 'Elso fekbetet Audi A4 B8', NULL, 2, 19900.00, NULL, 45, 'TRW', '8K0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(56, 'AUDI-A4B8-FB02', 'Hatso fekbetet Audi A4 B8', NULL, 2, 15900.00, NULL, 40, 'ATE', '8K0698451', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(57, 'AUDI-A4B8-FT01', 'Elso fektarcsa Audi A4 B8', NULL, 3, 32900.00, NULL, 22, 'Brembo', '8K0615301', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(58, 'AUDI-A4B8-LC01', 'Lengescsillapito elso Audi A4 B8', NULL, 9, 32900.00, NULL, 16, 'Bilstein', '8K0413031', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(59, 'AUDI-A4B8-OS01', 'Olajszuro Audi A4 B8', NULL, 5, 3290.00, NULL, 88, 'Mann', '06L115562', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(60, 'AUDI-A4B8-LS01', 'Legszuro Audi A4 B8', NULL, 6, 4990.00, NULL, 52, 'Mahle', '8K0133843', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(61, 'AUDI-A4B8-GY01', 'Gyujtagyertya Audi A4 B8 4db', NULL, 7, 14900.00, NULL, 48, 'NGK', '06H905611', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
+(62, 'AUDI-A4B9-FB01', 'Elso fekbetet Audi A4 B9', NULL, 2, 21900.00, NULL, 40, 'Brembo', '8W0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(63, 'AUDI-A4B9-FT01', 'Elso fektarcsa Audi A4 B9', NULL, 3, 36900.00, NULL, 20, 'Zimmermann', '8W0615301', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(64, 'AUDI-A4B9-OS01', 'Olajszuro Audi A4 B9', NULL, 5, 3590.00, NULL, 82, 'Mann', '06L115562B', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(65, 'AUDI-A4B9-LS01', 'Legszuro Audi A4 B9', NULL, 6, 5290.00, NULL, 48, 'K&N', '8W0133843', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(66, 'AUDI-A6C7-FB01', 'Elso fekbetet Audi A6 C7', NULL, 2, 24900.00, NULL, 35, 'TRW', '4G0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(67, 'AUDI-A6C7-FT01', 'Elso fektarcsa Audi A6 C7', NULL, 3, 42900.00, NULL, 18, 'Brembo', '4G0615301H', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(68, 'AUDI-A6C7-LC01', 'Lengescsillapito elso Audi A6 C7', NULL, 9, 38900.00, NULL, 14, 'Sachs', '4G0413031', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(69, 'AUDI-A6C7-OS01', 'Olajszuro Audi A6 C7', NULL, 5, 3890.00, NULL, 72, 'Mann', '06E115562H', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(70, 'AUDI-Q5FY-FB01', 'Elso fekbetet Audi Q5 FY', NULL, 2, 26900.00, NULL, 32, 'Brembo', '80A698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(71, 'AUDI-Q5FY-FT01', 'Elso fektarcsa Audi Q5 FY', NULL, 3, 48900.00, NULL, 16, 'Zimmermann', '80A615301', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(72, 'AUDI-Q5FY-OS01', 'Olajszuro Audi Q5 FY', NULL, 5, 4190.00, NULL, 65, 'Mann', '06L115562', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(73, 'MB-AW176-FB01', 'Elso fekbetet Mercedes A W176', NULL, 2, 18900.00, NULL, 40, 'TRW', 'A0004206900', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(74, 'MB-AW176-FT01', 'Elso fektarcsa Mercedes A W176', NULL, 3, 29900.00, NULL, 24, 'Brembo', 'A2464210012', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(75, 'MB-AW176-OS01', 'Olajszuro Mercedes A W176', NULL, 5, 3290.00, NULL, 75, 'Mann', 'A2701800009', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(76, 'MB-AW176-LS01', 'Legszuro Mercedes A W176', NULL, 6, 4690.00, NULL, 55, 'Mahle', 'A2700940004', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(77, 'MB-CW205-FB01', 'Elso fekbetet Mercedes C W205', NULL, 2, 22900.00, NULL, 38, 'Brembo', 'A0004207800', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(78, 'MB-CW205-FB02', 'Hatso fekbetet Mercedes C W205', NULL, 2, 18900.00, NULL, 35, 'ATE', 'A0004207900', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(79, 'MB-CW205-FT01', 'Elso fektarcsa Mercedes C W205', NULL, 3, 38900.00, NULL, 20, 'Zimmermann', 'A2054210012', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(80, 'MB-CW205-LC01', 'Lengescsillapito elso Mercedes C W205', NULL, 9, 35900.00, NULL, 14, 'Sachs', 'A2053200030', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(81, 'MB-CW205-OS01', 'Olajszuro Mercedes C W205', NULL, 5, 3590.00, NULL, 78, 'Mann', 'A2701800109', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(82, 'MB-CW205-LS01', 'Legszuro Mercedes C W205', NULL, 6, 5290.00, NULL, 50, 'Mahle', 'A2740940004', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(83, 'MB-CW205-GY01', 'Gyujtagyertya Mercedes C W205 4db', NULL, 7, 16900.00, NULL, 42, 'Bosch', 'A0041596403', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
+(84, 'MB-EW213-FB01', 'Elso fekbetet Mercedes E W213', NULL, 2, 26900.00, NULL, 32, 'TRW', 'A0004208400', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(85, 'MB-EW213-FT01', 'Elso fektarcsa Mercedes E W213', NULL, 3, 46900.00, NULL, 18, 'Brembo', 'A2134210012', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(86, 'MB-EW213-LC01', 'Lengescsillapito elso Mercedes E W213', NULL, 9, 42900.00, NULL, 12, 'Bilstein', 'A2133200030', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(87, 'MB-EW213-OS01', 'Olajszuro Mercedes E W213', NULL, 5, 3990.00, NULL, 70, 'Mann', 'A2761800009', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(88, 'MB-GLCX253-FB01', 'Elso fekbetet Mercedes GLC X253', NULL, 2, 28900.00, NULL, 30, 'Brembo', 'A0004207200', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(89, 'MB-GLCX253-FT01', 'Elso fektarcsa Mercedes GLC X253', NULL, 3, 52900.00, NULL, 15, 'Zimmermann', 'A2534210012', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(90, 'MB-GLCX253-OS01', 'Olajszuro Mercedes GLC X253', NULL, 5, 4290.00, NULL, 62, 'Mann', 'A2761800009', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(91, 'MAN-TGX-FB01', 'Elso fekbetet MAN TGX', NULL, 14, 45900.00, NULL, 25, 'Knorr-Bremse', '81508206086', '/images/parts/teher_fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(92, 'MAN-TGX-FT01', 'Fektarcsa MAN TGX', NULL, 14, 89900.00, NULL, 18, 'Wabco', '81508030038', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(93, 'MAN-TGX-OS01', 'Olajszuro MAN TGX D26', NULL, 14, 8900.00, NULL, 45, 'Mann', '51055040107', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(94, 'MAN-TGX-LS01', 'Legszuro MAN TGX', NULL, 14, 12900.00, NULL, 38, 'Mahle', '81084050020', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(95, 'MAN-TGX-US01', 'Uzemanyagszuro MAN TGX', NULL, 14, 9900.00, NULL, 50, 'Mann', '51125030066', '/images/parts/uzemanyagszuro.jpg', 1, '2026-02-18 09:04:44'),
+(96, 'MAN-TGS-FB01', 'Elso fekbetet MAN TGS', NULL, 14, 42900.00, NULL, 28, 'Knorr-Bremse', '81508206085', '/images/parts/teher_fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(97, 'MAN-TGS-LC01', 'Lengescsillapito MAN TGS', NULL, 14, 65900.00, NULL, 15, 'Sachs', '81437016946', '/images/parts/teher_lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(98, 'MAN-TGS-OS01', 'Olajszuro MAN TGS', NULL, 14, 7900.00, NULL, 52, 'Mann', '51055040105', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(99, 'SCAN-R-FB01', 'Elso fekbetet Scania R', NULL, 14, 48900.00, NULL, 22, 'Knorr-Bremse', '1535490', '/images/parts/teher_fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(100, 'SCAN-R-FT01', 'Fektarcsa Scania R', NULL, 14, 95900.00, NULL, 15, 'Wabco', '1402272', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(101, 'SCAN-R-OS01', 'Olajszuro Scania R DC13', NULL, 14, 9900.00, NULL, 40, 'Mann', '2022275', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(102, 'SCAN-R-LS01', 'Legszuro Scania R', NULL, 14, 14900.00, NULL, 35, 'Mahle', '1869993', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(103, 'SCAN-R-US01', 'Uzemanyagszuro Scania R', NULL, 14, 11900.00, NULL, 42, 'Mann', '1873018', '/images/parts/uzemanyagszuro.jpg', 1, '2026-02-18 09:04:44'),
+(104, 'SCAN-S-FB01', 'Elso fekbetet Scania S', NULL, 14, 52900.00, NULL, 20, 'Knorr-Bremse', '2195220', '/images/parts/teher_fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(105, 'SCAN-S-LC01', 'Lengescsillapito Scania S', NULL, 14, 72900.00, NULL, 12, 'Sachs', '2195110', '/images/parts/teher_lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(106, 'HON-CBR6-FB01', 'Elso fekbetet Honda CBR600RR', NULL, 15, 18900.00, NULL, 30, 'EBC', '06455-MFJ-D01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(107, 'HON-CBR6-FT01', 'Elso fektarcsa Honda CBR600RR', NULL, 15, 32900.00, NULL, 18, 'Brembo', '45120-MFJ-D01', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(108, 'HON-CBR6-OS01', 'Olajszuro Honda CBR600RR', NULL, 15, 2490.00, NULL, 65, 'HiFlo', '15410-MFJ-D01', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(109, 'HON-CBR6-LS01', 'Legszuro Honda CBR600RR', NULL, 15, 4290.00, NULL, 45, 'K&N', '17210-MFJ-D00', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(110, 'HON-CBR10-FB01', 'Elso fekbetet Honda CBR1000RR', NULL, 15, 22900.00, NULL, 28, 'EBC', '06455-MKF-D01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(111, 'HON-CBR10-FT01', 'Elso fektarcsa Honda CBR1000RR', NULL, 15, 38900.00, NULL, 15, 'Brembo', '45120-MKF-D01', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(112, 'HON-CBR10-OS01', 'Olajszuro Honda CBR1000RR', NULL, 15, 2890.00, NULL, 58, 'HiFlo', '15410-MKF-D01', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(113, 'HON-CB5-FB01', 'Elso fekbetet Honda CB500F', NULL, 15, 12900.00, NULL, 38, 'EBC', '06455-MGZ-J01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(114, 'HON-CB5-OS01', 'Olajszuro Honda CB500F', NULL, 15, 1990.00, NULL, 72, 'HiFlo', '15410-MGZ-D01', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(115, 'HON-AFT-FB01', 'Elso fekbetet Honda Africa Twin', NULL, 15, 16900.00, NULL, 32, 'EBC', '06455-MKK-D01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(116, 'HON-AFT-OS01', 'Olajszuro Honda Africa Twin', NULL, 15, 2690.00, NULL, 55, 'HiFlo', '15410-MKK-D01', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(117, 'HON-AFT-LS01', 'Legszuro Honda Africa Twin', NULL, 15, 5490.00, NULL, 40, 'K&N', '17210-MKK-D00', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
+(118, 'YAM-R6-FB01', 'Elso fekbetet Yamaha YZF-R6', NULL, 15, 19900.00, NULL, 28, 'EBC', '2C0-W0045-00', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(119, 'YAM-R6-FT01', 'Elso fektarcsa Yamaha YZF-R6', NULL, 15, 34900.00, NULL, 16, 'Brembo', '2C0-2581T-00', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(120, 'YAM-R6-OS01', 'Olajszuro Yamaha YZF-R6', NULL, 15, 2290.00, NULL, 62, 'HiFlo', '5GH-13440-50', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(121, 'YAM-R1-FB01', 'Elso fekbetet Yamaha YZF-R1', NULL, 15, 24900.00, NULL, 25, 'EBC', 'B67-W0045-00', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(122, 'YAM-R1-FT01', 'Elso fektarcsa Yamaha YZF-R1', NULL, 15, 42900.00, NULL, 14, 'Brembo', 'B67-2581T-00', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(123, 'YAM-R1-OS01', 'Olajszuro Yamaha YZF-R1', NULL, 15, 2590.00, NULL, 55, 'HiFlo', '5GH-13440-60', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(124, 'YAM-MT7-FB01', 'Elso fekbetet Yamaha MT-07', NULL, 15, 14900.00, NULL, 35, 'EBC', '1WS-W0045-00', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(125, 'YAM-MT7-OS01', 'Olajszuro Yamaha MT-07', NULL, 15, 1890.00, NULL, 70, 'HiFlo', '5GH-13440-30', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(126, 'YAM-MT9-FB01', 'Elso fekbetet Yamaha MT-09', NULL, 15, 16900.00, NULL, 32, 'EBC', 'B4C-W0045-00', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(127, 'YAM-MT9-FT01', 'Elso fektarcsa Yamaha MT-09', NULL, 15, 29900.00, NULL, 20, 'Brembo', 'B4C-2581T-00', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(128, 'YAM-MT9-OS01', 'Olajszuro Yamaha MT-09', NULL, 15, 2190.00, NULL, 65, 'HiFlo', '5GH-13440-40', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(129, 'BMW-5G30-FB01', 'Elso fekbetet BMW 5-os G30', NULL, 2, 26900.00, NULL, 35, 'Brembo', '34106888459', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:45'),
+(130, 'BMW-5G30-FT01', 'Elso fektarcsa BMW 5-os G30', NULL, 3, 48900.00, NULL, 18, 'Zimmermann', '34106888457', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:45'),
+(131, 'BMW-5G30-OS01', 'Olajszuro BMW 5-os G30', NULL, 5, 4290.00, NULL, 65, 'Mann', '11428575211', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:45'),
+(132, 'BMW-5G30-LS01', 'Legszuro BMW 5-os G30', NULL, 6, 6990.00, NULL, 40, 'Mahle', '13718577171', '/images/parts/legszuro.jpg', 1, '2026-02-26 10:15:45'),
+(133, 'BMW-X3E83-FB01', 'Elso fekbetet BMW X3 E83', NULL, 2, 18900.00, NULL, 30, 'TRW', '34113404362', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:45'),
+(134, 'BMW-X3E83-FT01', 'Elso fektarcsa BMW X3 E83', NULL, 3, 32900.00, NULL, 20, 'Brembo', '34113400151', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:45'),
+(135, 'BMW-X3E83-OS01', 'Olajszuro BMW X3 E83', NULL, 5, 3290.00, NULL, 70, 'Mann', '11427566327', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:45'),
+(136, 'BMW-X3F25-FB01', 'Elso fekbetet BMW X3 F25', NULL, 2, 22900.00, NULL, 35, 'Brembo', '34116851269', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:45'),
+(137, 'BMW-X3F25-FT01', 'Elso fektarcsa BMW X3 F25', NULL, 3, 38900.00, NULL, 18, 'Zimmermann', '34116794429', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:45'),
+(138, 'BMW-X3F25-OS01', 'Olajszuro BMW X3 F25', NULL, 5, 3590.00, NULL, 75, 'Mann', '11428683196', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:45'),
+(139, 'BMW-X3F25-LC01', 'Lengescsillapito elso BMW X3 F25', NULL, 9, 36900.00, NULL, 14, 'Sachs', '31316796315', '/images/parts/lengescsillapito.jpg', 1, '2026-02-26 10:15:45'),
+(140, 'BMW-X3G01-FB01', 'Elso fekbetet BMW X3 G01', NULL, 2, 24900.00, NULL, 32, 'Brembo', '34106888459', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(141, 'BMW-X3G01-FT01', 'Elso fektarcsa BMW X3 G01', NULL, 3, 42900.00, NULL, 16, 'Brembo', '34106888457', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(142, 'BMW-X3G01-OS01', 'Olajszuro BMW X3 G01', NULL, 5, 3990.00, NULL, 68, 'Mann', '11428575211', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(143, 'BMW-X5E53-FB01', 'Elso fekbetet BMW X5 E53', NULL, 2, 22900.00, NULL, 28, 'TRW', '34116761244', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(144, 'BMW-X5E53-FT01', 'Elso fektarcsa BMW X5 E53', NULL, 3, 38900.00, NULL, 16, 'Brembo', '34116756847', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(145, 'BMW-X5E53-LC01', 'Lengescsillapito elso BMW X5 E53', NULL, 9, 32900.00, NULL, 14, 'Bilstein', '31316757106', '/images/parts/lengescsillapito.jpg', 1, '2026-02-26 10:15:46'),
+(146, 'BMW-X5E70-FB01', 'Elso fekbetet BMW X5 E70', NULL, 2, 26900.00, NULL, 30, 'Brembo', '34116852253', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(147, 'BMW-X5E70-FT01', 'Elso fektarcsa BMW X5 E70', NULL, 3, 45900.00, NULL, 15, 'Zimmermann', '34116793245', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(148, 'BMW-X5E70-OS01', 'Olajszuro BMW X5 E70', NULL, 5, 3890.00, NULL, 60, 'Mann', '11427566327', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(149, 'BMW-X5F15-FB01', 'Elso fekbetet BMW X5 F15', NULL, 2, 29900.00, NULL, 28, 'TRW', '34116858540', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(150, 'BMW-X5F15-FT01', 'Elso fektarcsa BMW X5 F15', NULL, 3, 49900.00, NULL, 14, 'Brembo', '34116858652', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(151, 'BMW-X5F15-OS01', 'Olajszuro BMW X5 F15', NULL, 5, 4190.00, NULL, 55, 'Mann', '11428683196', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(152, 'AUDI-A38L-FB01', 'Elso fekbetet Audi A3 8L', NULL, 2, 13900.00, NULL, 42, 'TRW', '1J0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(153, 'AUDI-A38L-OS01', 'Olajszuro Audi A3 8L', NULL, 5, 2490.00, NULL, 85, 'Mann', '06A115561B', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(154, 'AUDI-A38L-LS01', 'Legszuro Audi A3 8L', NULL, 6, 3490.00, NULL, 60, 'Mahle', '1J0129620', '/images/parts/legszuro.jpg', 1, '2026-02-26 10:15:46'),
+(155, 'AUDI-A38Y-FB01', 'Elso fekbetet Audi A3 8Y', NULL, 2, 19900.00, NULL, 38, 'Brembo', '5Q0698151A', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(156, 'AUDI-A38Y-FT01', 'Elso fektarcsa Audi A3 8Y', NULL, 3, 32900.00, NULL, 22, 'Zimmermann', '5Q0615301G', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(157, 'AUDI-A38Y-OS01', 'Olajszuro Audi A3 8Y', NULL, 5, 3490.00, NULL, 75, 'Mann', '06L115562C', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(158, 'AUDI-A4B5-FB01', 'Elso fekbetet Audi A4 B5', NULL, 2, 13900.00, NULL, 45, 'TRW', '4A0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(159, 'AUDI-A4B5-OS01', 'Olajszuro Audi A4 B5', NULL, 5, 2390.00, NULL, 90, 'Mann', '06A115561B', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(160, 'AUDI-A4B5-LS01', 'Legszuro Audi A4 B5', NULL, 6, 3290.00, NULL, 65, 'Mahle', '058133843', '/images/parts/legszuro.jpg', 1, '2026-02-26 10:15:46'),
+(161, 'AUDI-A4B6-FB01', 'Elso fekbetet Audi A4 B6', NULL, 2, 15900.00, NULL, 42, 'ATE', '8E0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(162, 'AUDI-A4B6-FT01', 'Elso fektarcsa Audi A4 B6', NULL, 3, 26900.00, NULL, 24, 'Brembo', '8E0615301', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(163, 'AUDI-A4B6-OS01', 'Olajszuro Audi A4 B6', NULL, 5, 2690.00, NULL, 82, 'Mann', '06D115562', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(164, 'AUDI-A4B7-FB01', 'Elso fekbetet Audi A4 B7', NULL, 2, 17900.00, NULL, 40, 'TRW', '8E0698151C', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(165, 'AUDI-A4B7-FT01', 'Elso fektarcsa Audi A4 B7', NULL, 3, 29900.00, NULL, 22, 'Zimmermann', '8E0615301Q', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(166, 'AUDI-A4B7-OS01', 'Olajszuro Audi A4 B7', NULL, 5, 2890.00, NULL, 78, 'Mann', '06D115562', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(167, 'AUDI-A6C5-FB01', 'Elso fekbetet Audi A6 C5', NULL, 2, 16900.00, NULL, 38, 'ATE', '4B0698151A', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(168, 'AUDI-A6C5-FT01', 'Elso fektarcsa Audi A6 C5', NULL, 3, 29900.00, NULL, 20, 'Brembo', '4B0615301B', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(169, 'AUDI-A6C5-OS01', 'Olajszuro Audi A6 C5', NULL, 5, 2790.00, NULL, 75, 'Mann', '06A115561B', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:46'),
+(170, 'AUDI-A6C6-FB01', 'Elso fekbetet Audi A6 C6', NULL, 2, 19900.00, NULL, 36, 'TRW', '4F0698151D', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:46'),
+(171, 'AUDI-A6C6-FT01', 'Elso fektarcsa Audi A6 C6', NULL, 3, 35900.00, NULL, 18, 'Zimmermann', '4F0615301E', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:46'),
+(172, 'AUDI-A6C6-OS01', 'Olajszuro Audi A6 C6', '', NULL, 3190.00, NULL, 82, '', '', '', 0, '2026-02-26 10:15:46');
 
 -- --------------------------------------------------------
 
@@ -335,7 +379,89 @@ INSERT INTO `alkatresz_auto` (`id`, `alkatresz_id`, `modell_id`, `motor_id`) VAL
 (138, 125, 74, NULL),
 (139, 126, 75, NULL),
 (140, 127, 75, NULL),
-(141, 128, 75, NULL);
+(141, 128, 75, NULL),
+(142, 129, 10, NULL),
+(143, 130, 10, NULL),
+(144, 132, 10, NULL),
+(145, 131, 10, NULL),
+(149, 133, 11, NULL),
+(150, 134, 11, NULL),
+(151, 135, 11, NULL),
+(152, 136, 12, NULL),
+(153, 137, 12, NULL),
+(154, 139, 12, NULL),
+(155, 138, 12, NULL),
+(159, 140, 13, NULL),
+(160, 141, 13, NULL),
+(161, 142, 13, NULL),
+(162, 143, 14, NULL),
+(163, 144, 14, NULL),
+(164, 145, 14, NULL),
+(165, 146, 15, NULL),
+(166, 147, 15, NULL),
+(167, 148, 15, NULL),
+(168, 149, 16, NULL),
+(169, 150, 16, NULL),
+(170, 151, 16, NULL),
+(171, 152, 18, NULL),
+(172, 154, 18, NULL),
+(173, 153, 18, NULL),
+(174, 155, 21, NULL),
+(175, 156, 21, NULL),
+(176, 157, 21, NULL),
+(177, 158, 22, NULL),
+(178, 160, 22, NULL),
+(179, 159, 22, NULL),
+(180, 161, 23, NULL),
+(181, 162, 23, NULL),
+(182, 163, 23, NULL),
+(183, 164, 24, NULL),
+(184, 165, 24, NULL),
+(185, 166, 24, NULL),
+(186, 167, 27, NULL),
+(187, 168, 27, NULL),
+(188, 169, 27, NULL),
+(189, 129, 10, NULL),
+(190, 130, 10, NULL),
+(191, 132, 10, NULL),
+(192, 131, 10, NULL),
+(196, 133, 11, NULL),
+(197, 134, 11, NULL),
+(198, 135, 11, NULL),
+(199, 136, 12, NULL),
+(200, 137, 12, NULL),
+(201, 139, 12, NULL),
+(202, 138, 12, NULL),
+(206, 140, 13, NULL),
+(207, 141, 13, NULL),
+(208, 142, 13, NULL),
+(209, 143, 14, NULL),
+(210, 144, 14, NULL),
+(211, 145, 14, NULL),
+(212, 146, 15, NULL),
+(213, 147, 15, NULL),
+(214, 148, 15, NULL),
+(215, 149, 16, NULL),
+(216, 150, 16, NULL),
+(217, 151, 16, NULL),
+(218, 152, 18, NULL),
+(219, 154, 18, NULL),
+(220, 153, 18, NULL),
+(221, 155, 21, NULL),
+(222, 156, 21, NULL),
+(223, 157, 21, NULL),
+(224, 158, 22, NULL),
+(225, 160, 22, NULL),
+(226, 159, 22, NULL),
+(227, 161, 23, NULL),
+(228, 162, 23, NULL),
+(229, 163, 23, NULL),
+(230, 164, 24, NULL),
+(231, 165, 24, NULL),
+(232, 166, 24, NULL),
+(233, 167, 27, NULL),
+(234, 168, 27, NULL),
+(235, 169, 27, NULL);
 
 -- --------------------------------------------------------
 
@@ -454,13 +580,6 @@ CREATE TABLE `chat_uzenetek` (
   `letrehozva` datetime DEFAULT current_timestamp(),
   `valaszolva` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `chat_uzenetek`
---
-
-INSERT INTO `chat_uzenetek` (`id`, `user_id`, `uzenet`, `admin_valasz`, `admin_id`, `statusz`, `letrehozva`, `valaszolva`) VALUES
-(1, 2, 'segitseg', 'anyad', 1, 'lezart', '2026-02-18 10:00:27', '2026-02-18 10:01:01');
 
 -- --------------------------------------------------------
 
@@ -710,24 +829,25 @@ CREATE TABLE `olajok` (
   `keszlet` int(11) DEFAULT 0,
   `gyarto` varchar(100) DEFAULT NULL,
   `specifikacio` varchar(255) DEFAULT NULL,
-  `aktiv` tinyint(1) DEFAULT 1
+  `aktiv` tinyint(1) DEFAULT 1,
+  `kep_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `olajok`
 --
 
-INSERT INTO `olajok` (`id`, `cikkszam`, `nev`, `leiras`, `tipus`, `viszkozitas`, `kiszereles`, `ar`, `akcios_ar`, `keszlet`, `gyarto`, `specifikacio`, `aktiv`) VALUES
-(1, 'OLJ-001', 'Castrol EDGE 5W-30 LL', NULL, 'motorolaj', '5W-30', '5L', 24900.00, 21900.00, 50, 'Castrol', 'BMW LL-04, MB 229.51, VW 504/507', 1),
-(2, 'OLJ-002', 'Mobil 1 ESP 5W-30', NULL, 'motorolaj', '5W-30', '5L', 26900.00, NULL, 45, 'Mobil', 'BMW LL-04, MB 229.52, VW 504/507', 1),
-(3, 'OLJ-003', 'Shell Helix Ultra 5W-40', NULL, 'motorolaj', '5W-40', '5L', 22900.00, 19900.00, 60, 'Shell', 'MB 229.5, VW 502/505, BMW LL-01', 1),
-(4, 'OLJ-004', 'Total Quartz 9000 5W-40', NULL, 'motorolaj', '5W-40', '5L', 19900.00, NULL, 55, 'Total', 'MB 229.5, VW 502/505', 1),
-(5, 'OLJ-005', 'Liqui Moly Top Tec 4200 5W-30', NULL, 'motorolaj', '5W-30', '5L', 28900.00, 25900.00, 40, 'Liqui Moly', 'BMW LL-04, MB 229.51', 1),
-(6, 'OLJ-006', 'Castrol GTX 10W-40', NULL, 'motorolaj', '10W-40', '5L', 14900.00, NULL, 75, 'Castrol', 'ACEA A3/B4, VW 501/505', 1),
-(7, 'OLJ-007', 'Shell Rimula R6 LME 5W-30', NULL, 'motorolaj', '5W-30', '20L', 89900.00, NULL, 25, 'Shell', 'Teherauto, MB 228.51', 1),
-(8, 'OLJ-008', 'Motul 7100 10W-40', NULL, 'motorolaj', '10W-40', '4L', 18900.00, 16900.00, 48, 'Motul', 'Motorkerekpar 4T', 1),
-(9, 'OLJ-009', 'ATE SL DOT4 fekfolyadek', NULL, 'fekfolyadek', '', '1L', 4900.00, NULL, 85, 'ATE', 'DOT4, FMVSS 116', 1),
-(10, 'OLJ-010', 'Prestone hutofolyadek -38C', NULL, 'hutofolyadek', '', '4L', 8900.00, 7900.00, 65, 'Prestone', 'G12+', 1);
+INSERT INTO `olajok` (`id`, `cikkszam`, `nev`, `leiras`, `tipus`, `viszkozitas`, `kiszereles`, `ar`, `akcios_ar`, `keszlet`, `gyarto`, `specifikacio`, `aktiv`, `kep_url`) VALUES
+(1, 'OLJ-001', 'Castrol EDGE 5W-30 LL', NULL, 'motorolaj', '5W-30', '5L', 24900.00, 21900.00, 50, 'Castrol', 'BMW LL-04, MB 229.51, VW 504/507', 1, '/images/parts/motorolaj.jpg'),
+(2, 'OLJ-002', 'Mobil 1 ESP 5W-30', NULL, 'motorolaj', '5W-30', '5L', 26900.00, NULL, 45, 'Mobil', 'BMW LL-04, MB 229.52, VW 504/507', 1, '/images/parts/motorolaj.jpg'),
+(3, 'OLJ-003', 'Shell Helix Ultra 5W-40', NULL, 'motorolaj', '5W-40', '5L', 22900.00, 19900.00, 60, 'Shell', 'MB 229.5, VW 502/505, BMW LL-01', 1, '/images/parts/motorolaj.jpg'),
+(4, 'OLJ-004', 'Total Quartz 9000 5W-40', NULL, 'motorolaj', '5W-40', '5L', 19900.00, NULL, 55, 'Total', 'MB 229.5, VW 502/505', 1, '/images/parts/motorolaj.jpg'),
+(5, 'OLJ-005', 'Liqui Moly Top Tec 4200 5W-30', NULL, 'motorolaj', '5W-30', '5L', 28900.00, 25900.00, 40, 'Liqui Moly', 'BMW LL-04, MB 229.51', 1, '/images/parts/motorolaj.jpg'),
+(6, 'OLJ-006', 'Castrol GTX 10W-40', NULL, 'motorolaj', '10W-40', '5L', 14900.00, NULL, 75, 'Castrol', 'ACEA A3/B4, VW 501/505', 1, '/images/parts/motorolaj.jpg'),
+(7, 'OLJ-007', 'Shell Rimula R6 LME 5W-30', NULL, 'motorolaj', '5W-30', '20L', 89900.00, NULL, 25, 'Shell', 'Teherauto, MB 228.51', 1, '/images/parts/motorolaj.jpg'),
+(8, 'OLJ-008', 'Motul 7100 10W-40', NULL, 'motorolaj', '10W-40', '4L', 18900.00, 16900.00, 48, 'Motul', 'Motorkerekpar 4T', 1, '/images/parts/motorolaj.jpg'),
+(9, 'OLJ-009', 'ATE SL DOT4 fekfolyadek', NULL, 'fekfolyadek', '', '1L', 4900.00, NULL, 85, 'ATE', 'DOT4, FMVSS 116', 1, '/images/parts/uzemanyagszuro.jpg'),
+(10, 'OLJ-010', 'Prestone hutofolyadek -38C', NULL, 'hutofolyadek', '', '4L', 8900.00, 7900.00, 65, 'Prestone', 'G12+', 1, '/images/parts/vizszivattyu.jpg');
 
 -- --------------------------------------------------------
 
@@ -755,14 +875,6 @@ CREATE TABLE `rendelesek` (
   `letrehozva` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
---
--- A tábla adatainak kiíratása `rendelesek`
---
-
-INSERT INTO `rendelesek` (`id`, `user_id`, `rendeles_szam`, `statusz`, `nev`, `email`, `telefon`, `iranyitoszam`, `varos`, `utca`, `hazszam`, `megjegyzes`, `osszeg`, `szallitasi_dij`, `vegosszeg`, `fizetesi_mod`, `letrehozva`) VALUES
-(1, 1, 'AP-20260218-4858', 'fuggoben', 'Admin Rendszer', 'admin@gmail.com', '123453', '3525', 'asdasd', 'asdasd', '4', '', 22900.00, 1490.00, 24390.00, 'utanvet', '2026-02-18 09:58:03'),
-(2, 2, 'AP-20260218-6504', 'fuggoben', 'Teszt Elek', 'teszt@teszt.hu', '123453', '3525', 'asdasd', 'asdasd', '4', 'hgfhgfhgfhgf', 54480.00, 1490.00, 55970.00, 'utanvet', '2026-02-18 10:00:10');
-
 -- --------------------------------------------------------
 
 --
@@ -779,17 +891,6 @@ CREATE TABLE `rendeles_tetelek` (
   `egysegar` decimal(10,2) NOT NULL,
   `osszeg` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
-
---
--- A tábla adatainak kiíratása `rendeles_tetelek`
---
-
-INSERT INTO `rendeles_tetelek` (`id`, `rendeles_id`, `alkatresz_id`, `olaj_id`, `termek_nev`, `mennyiseg`, `egysegar`, `osszeg`) VALUES
-(1, 1, 27, NULL, 'Elso fekbetet BMW 3-as G20', 1, 22900.00, 22900.00),
-(2, 2, 51, NULL, 'Elso fekbetet Audi A3 8V', 1, 17900.00, 17900.00),
-(3, 2, 52, NULL, 'Elso fektarcsa Audi A3 8V', 1, 28900.00, 28900.00),
-(4, 2, 54, NULL, 'Legszuro Audi A3 8V', 1, 4490.00, 4490.00),
-(5, 2, 53, NULL, 'Olajszuro Audi A3 8V', 1, 3190.00, 3190.00);
 
 -- --------------------------------------------------------
 
@@ -815,8 +916,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `felhasznalonev`, `email`, `jelszo`, `vezeteknev`, `keresztnev`, `telefon`, `szerepkor`, `letrehozva`, `utolso_belepes`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin', 'Admin', 'Rendszer', NULL, 'admin', '2026-02-18 09:04:43', '2026-02-18 10:09:41'),
-(2, 'teszt', 'teszt@teszt.hu', 'teszt123', 'Teszt', 'Elek', NULL, 'user', '2026-02-18 09:04:43', '2026-02-18 09:59:32');
+(1, 'admin', 'admin@gmail.com', '$2a$12$syo4yyaAVnt5OHkfF1/dMus4fpFjMVRUn67UP2UiiQmQqhaWpkH0m', 'Admin', NULL, NULL, 'admin', '2026-03-26 22:45:08', '2026-03-27 11:57:35'),
+(2, 'user784', 'user@gmail.com', '$2a$11$WYdSL5CSMpbQ7XhYs9pD2uZHENjENdPjxgZPvekvmIv1VImCimgNi', 'Test', 'User', '+36301234567', 'user', '2026-03-27 11:55:43', '2026-03-27 11:58:46');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -936,13 +1037,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `alkatreszek`
 --
 ALTER TABLE `alkatreszek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
 
 --
 -- AUTO_INCREMENT a táblához `alkatresz_auto`
 --
 ALTER TABLE `alkatresz_auto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 
 --
 -- AUTO_INCREMENT a táblához `automodellek`
@@ -954,7 +1055,7 @@ ALTER TABLE `automodellek`
 -- AUTO_INCREMENT a táblához `chat_uzenetek`
 --
 ALTER TABLE `chat_uzenetek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT a táblához `cimek`
@@ -978,7 +1079,7 @@ ALTER TABLE `kategoriak`
 -- AUTO_INCREMENT a táblához `kosar`
 --
 ALTER TABLE `kosar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT a táblához `markak`
@@ -1002,19 +1103,19 @@ ALTER TABLE `olajok`
 -- AUTO_INCREMENT a táblához `rendelesek`
 --
 ALTER TABLE `rendelesek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT a táblához `rendeles_tetelek`
 --
 ALTER TABLE `rendeles_tetelek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Megkötések a kiírt táblákhoz
