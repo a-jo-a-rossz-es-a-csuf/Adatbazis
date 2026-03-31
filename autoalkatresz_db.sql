@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Már 29. 13:18
+-- Létrehozás ideje: 2026. Már 31. 18:13
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -581,24 +581,16 @@ CREATE TABLE `chat_uzenetek` (
   `valaszolva` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
--- --------------------------------------------------------
-
 --
--- Tábla szerkezet ehhez a táblához `cimek`
+-- A tábla adatainak kiíratása `chat_uzenetek`
 --
 
-CREATE TABLE `cimek` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `cim_tipus` varchar(20) DEFAULT 'szallitas',
-  `nev` varchar(100) DEFAULT NULL,
-  `iranyitoszam` varchar(10) DEFAULT NULL,
-  `varos` varchar(50) DEFAULT NULL,
-  `utca` varchar(100) DEFAULT NULL,
-  `hazszam` varchar(20) DEFAULT NULL,
-  `telefon` varchar(20) DEFAULT NULL,
-  `alapertelmezett` tinyint(1) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+INSERT INTO `chat_uzenetek` (`id`, `user_id`, `uzenet`, `admin_valasz`, `admin_id`, `statusz`, `letrehozva`, `valaszolva`) VALUES
+(8, 2, 'Minden fasza!', 'Köszönjük!', 1, 'megvalaszolva', '2026-03-28 13:45:01', '2026-03-28 13:48:35'),
+(9, 2, 'Mikor érkezik meg a rendelésem?', '3 munkanap', 1, 'megvalaszolva', '2026-03-28 13:47:24', '2026-03-28 13:48:49'),
+(10, 2, 'kurvak vagytok', 'hat ez van xd\n', 1, 'megvalaszolva', '2026-03-30 15:26:35', '2026-03-30 22:50:48'),
+(11, 2, 'ez most jo?', 'aha', 1, 'megvalaszolva', '2026-03-31 15:17:15', '2026-03-31 16:01:08'),
+(12, 18, 'itt a kedvezmeny kocsogok xd', 'orulunk neki xd', 1, 'megvalaszolva', '2026-03-31 17:25:46', '2026-03-31 17:27:08');
 
 -- --------------------------------------------------------
 
@@ -723,6 +715,25 @@ CREATE TABLE `kosar` (
   `mennyiseg` int(11) DEFAULT 1,
   `hozzaadva` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `kosar`
+--
+
+INSERT INTO `kosar` (`id`, `user_id`, `alkatresz_id`, `olaj_id`, `mennyiseg`, `hozzaadva`) VALUES
+(62, 14, NULL, 4, 1, '2026-03-29 11:50:38'),
+(98, 16, NULL, 9, 1, '2026-03-30 18:41:52'),
+(103, 17, 167, NULL, 1, '2026-03-30 22:58:40'),
+(104, 17, 168, NULL, 1, '2026-03-30 22:58:43'),
+(105, 17, 99, NULL, 1, '2026-03-30 22:58:50'),
+(106, 17, 100, NULL, 1, '2026-03-30 22:58:52'),
+(107, 17, 116, NULL, 1, '2026-03-30 22:59:00'),
+(108, 17, 117, NULL, 1, '2026-03-30 22:59:02'),
+(109, 17, 47, NULL, 1, '2026-03-30 22:59:10'),
+(110, 17, 11, NULL, 1, '2026-03-30 22:59:35'),
+(111, 17, NULL, 9, 1, '2026-03-30 22:59:39'),
+(112, 17, NULL, 10, 1, '2026-03-30 22:59:41'),
+(113, 17, NULL, 7, 1, '2026-03-30 22:59:43');
 
 -- --------------------------------------------------------
 
@@ -875,6 +886,36 @@ CREATE TABLE `rendelesek` (
   `letrehozva` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `rendelesek`
+--
+
+INSERT INTO `rendelesek` (`id`, `user_id`, `rendeles_szam`, `statusz`, `nev`, `email`, `telefon`, `iranyitoszam`, `varos`, `utca`, `hazszam`, `megjegyzes`, `osszeg`, `szallitasi_dij`, `vegosszeg`, `fizetesi_mod`, `letrehozva`) VALUES
+(13, 2, 'AP-20260328-6303', 'fuggoben', 'Test User', 'user@gmail.com', '+36301234567', '1111', 'Budapest', 'Váci út 132.', '', '', 42900.00, 1490.00, 44390.00, 'kartya', '2026-03-28 13:46:42'),
+(14, 2, 'AP-20260328-5557', 'fuggoben', 'Test User', 'user@gmail.com', '+361234567', '1111', 'Budapest', 'Váci út 130.', '', '', 74500.00, 1490.00, 75990.00, 'utanvet', '2026-03-28 13:50:26'),
+(15, 2, 'AP-20260328-0583', 'teljesitve', 'Test User', 'user@gmail.com', '+36309876543', '1234', 'Budapest', 'asd', '', '', 14900.00, 1490.00, 16390.00, 'kartya', '2026-03-28 15:35:29'),
+(16, 2, 'AP-20260328-8845', 'fuggoben', 'Test User', 'user@gmail.com', '+36301239877', '1234', 'Budapest', 'Anyádat u. 18', '', '', 14900.00, 1490.00, 16390.00, 'kartya', '2026-03-28 15:42:05'),
+(17, 9, 'AP-20260328-4716', 'fuggoben', 'Mc Isti', 'szajzar@gmail.com', '+36302349999', '4400', 'Nyíregyháza', 'Szájzár u. 67', '', '', 39500.00, 1490.00, 40990.00, 'utanvet', '2026-03-28 16:58:50'),
+(18, 10, 'AP-20260329-6422', 'fuggoben', 'apad fasza', 'apad@gmail.com', '+36988873621', '1111', 'Budapest', 'Anyád u. 77', '', '', 10880.00, 1490.00, 12370.00, 'utanvet', '2026-03-29 11:10:21'),
+(19, 11, 'AP-20260329-3924', 'fuggoben', 'adj kedvezmenyt', 'adj@gmail.com', '+3631231231', '1111', 'asdasd', 'asdasdasd', '', '', 4165.00, 1490.00, 5655.00, 'utanvet', '2026-03-29 11:18:46'),
+(20, 11, 'AP-20260329-6156', 'fuggoben', 'adj kedvezmenyt', 'adj@gmail.com', '+36201111111', '1111', 'asdasd', 'asdasdasdasda', '', '', 7900.00, 1490.00, 9390.00, 'utanvet', '2026-03-29 11:19:44'),
+(21, 12, 'AP-20260329-1935', 'fuggoben', 'mukodj legyszi', 'mukodj@gmail.com', '+36301231111', '1111', 'fhjghjgh', 'jghjghjh', '', '', 4165.00, 1490.00, 5655.00, 'utanvet', '2026-03-29 11:24:19'),
+(22, 13, 'AP-20260329-9601', 'fuggoben', 'utolso esely', 'utolso@gmail.com', '+36201233333', '1111', 'asdasdasda', 'sdasdasdasd', '', '', 4165.00, 1490.00, 5655.00, 'utanvet', '2026-03-29 11:31:39'),
+(23, 14, 'AP-20260329-3132', 'fuggoben', 'add ide', 'addide@gmail.com', '+36301231111', '1111', 'mukodik', 'mukodik u. 15.', '', '', 4165.00, 1490.00, 5655.00, 'utanvet', '2026-03-29 11:48:25'),
+(24, 15, 'AP-20260329-9528', 'fuggoben', 'most jo', 'mostjo@gmail.com', '+36311119999', '1111', 'Kiraly', 'Fasza u. 88', '', '', 16915.00, 1490.00, 18405.00, 'utanvet', '2026-03-29 11:53:28'),
+(25, 15, 'AP-20260329-4298', 'fuggoben', 'most jo', 'mostjo@gmail.com', '+36311111111', '1111', 'ljkljklj', 'kljljljkl', '', '', 19900.00, 1490.00, 21390.00, 'utanvet', '2026-03-29 11:54:20'),
+(26, 9, 'AP-20260329-1755', 'fuggoben', 'Mc Isti', 'szajzar@gmail.com', '+36311232222', '4400', 'Nyíregyháza', 'Pizza 32 m2', '', '', 28900.00, 1490.00, 30390.00, 'utanvet', '2026-03-29 12:45:01'),
+(27, 2, 'AP-20260329-9274', 'fuggoben', 'Test User', 'user@gmail.com', '+36312221132', '1111', 'asdasdas', 'dasdasd', '', '', 24500.00, 1490.00, 25990.00, 'utanvet', '2026-03-29 12:49:51'),
+(28, 2, 'AP-20260329-2092', 'fuggoben', 'Test User', 'user@gmail.com', '+36312222222', '1111', 'asdasda', 'sdasdasd', '', '', 24500.00, 1490.00, 25990.00, 'utanvet', '2026-03-29 12:58:28'),
+(29, 2, 'R-1774898010203', 'fuggoben', 'Test User', 'user@gmail.com', '+36301111111', '1111', 'asdasd', 'asdasd', '', '', 0.00, 1490.00, 16390.00, 'utanvet', '2026-03-30 21:13:30'),
+(31, 2, 'R-1774899032604', 'fuggoben', 'Test User', 'user@gmail.com', '+36301233333', '1111', 'asdasd', 'asdasddasd', '', '', 14900.00, 1490.00, 16390.00, 'utanvet', '2026-03-30 21:30:32'),
+(32, 2, 'R-1774899317357', 'fuggoben', 'Test User', 'user@gmail.com', '+36301111111', '1111', 'qweqwe', 'qweqwe', '', '', 13800.00, 1490.00, 15290.00, 'utanvet', '2026-03-30 21:35:17'),
+(33, 2, 'R-1774899592355', 'fuggoben', 'Test User', 'user@gmail.com', '+36301222222', '2222', 'asasd', 'asdasd', '', '', 1990.00, 1490.00, 3480.00, 'utanvet', '2026-03-30 21:39:52'),
+(34, 2, 'R-1774899641914', 'fuggoben', 'Test User', 'user@gmail.com', '+36201111111', '2222', 'asdqweqweqwe', 'qweqweqwe', '', '', 11940.00, 1490.00, 13430.00, 'utanvet', '2026-03-30 21:40:41'),
+(35, 2, 'R-1774964887376', 'fuggoben', 'Test User', 'user@gmail.com', '+36301111111', '1111', 'qweqwe', 'rtzrtz', '', '', 144690.00, 1490.00, 146180.00, 'utanvet', '2026-03-31 15:48:07'),
+(36, 18, 'R-1774970647933', 'fuggoben', 'baszom anyad', 'baszom@gmail.com', '+36301111111', '2222', 'nvbnvbn', 'vbnvbn', '', '', 269700.00, 1490.00, 230735.00, 'utanvet', '2026-03-31 17:24:07'),
+(37, 18, 'R-1774970711324', 'fuggoben', 'baszom anyad', 'baszom@gmail.com', '+36302222222', '4444', 'qweqweqwe', 'asdasdasd', '', '', 28900.00, 1490.00, 30390.00, 'kartya', '2026-03-31 17:25:11');
+
 -- --------------------------------------------------------
 
 --
@@ -891,6 +932,34 @@ CREATE TABLE `rendeles_tetelek` (
   `egysegar` decimal(10,2) NOT NULL,
   `osszeg` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `rendeles_tetelek`
+--
+
+INSERT INTO `rendeles_tetelek` (`id`, `rendeles_id`, `alkatresz_id`, `olaj_id`, `termek_nev`, `mennyiseg`, `egysegar`, `osszeg`) VALUES
+(22, 13, 86, NULL, 'Lengescsillapito elso Mercedes E W213', 1, 42900.00, 42900.00),
+(23, 14, 1, NULL, 'Elso fekbetet BMW 1-es E87', 5, 14900.00, 74500.00),
+(24, 15, NULL, 6, 'Castrol GTX 10W-40', 1, 14900.00, 14900.00),
+(25, 16, NULL, 6, 'Castrol GTX 10W-40', 1, 14900.00, 14900.00),
+(26, 17, NULL, 10, 'Prestone hutofolyadek -38C', 5, 7900.00, 39500.00),
+(27, 18, NULL, 9, 'ATE SL DOT4 fekfolyadek', 1, 4165.00, 4165.00),
+(28, 18, NULL, 10, 'Prestone hutofolyadek -38C', 1, 6715.00, 6715.00),
+(29, 19, NULL, 9, 'ATE SL DOT4 fekfolyadek', 1, 4165.00, 4165.00),
+(30, 20, NULL, 10, 'Prestone hutofolyadek -38C', 1, 7900.00, 7900.00),
+(31, 21, NULL, 9, 'ATE SL DOT4 fekfolyadek', 1, 4165.00, 4165.00),
+(32, 22, NULL, 9, 'ATE SL DOT4 fekfolyadek', 1, 4165.00, 4165.00),
+(33, 23, NULL, 9, 'ATE SL DOT4 fekfolyadek', 1, 4165.00, 4165.00),
+(34, 24, NULL, 4, 'Total Quartz 9000 5W-40', 1, 16915.00, 16915.00),
+(35, 25, NULL, 4, 'Total Quartz 9000 5W-40', 1, 19900.00, 19900.00),
+(36, 26, 26, NULL, 'Vízpumpa BMW 3-as F30', 1, 28900.00, 28900.00),
+(37, 27, NULL, 9, 'ATE SL DOT4 fékfolyadék', 5, 4900.00, 24500.00),
+(38, 28, NULL, 9, 'ATE SL DOT4 fékfolyadék', 5, 4900.00, 24500.00),
+(39, 31, 97, NULL, NULL, 1, 14900.00, 0.00),
+(40, 32, 99, NULL, NULL, 1, 8900.00, 0.00),
+(41, 32, 100, NULL, NULL, 1, 4900.00, 0.00),
+(42, 33, 101, NULL, NULL, 1, 1990.00, 0.00),
+(43, 34, 101, NULL, NULL, 6, 1990.00, 0.00);
 
 -- --------------------------------------------------------
 
@@ -916,8 +985,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `felhasznalonev`, `email`, `jelszo`, `vezeteknev`, `keresztnev`, `telefon`, `szerepkor`, `letrehozva`, `utolso_belepes`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2a$12$syo4yyaAVnt5OHkfF1/dMus4fpFjMVRUn67UP2UiiQmQqhaWpkH0m', 'Admin', NULL, NULL, 'admin', '2026-03-26 22:45:08', '2026-03-29 13:16:07'),
-(2, 'user784', 'user@gmail.com', '$2a$11$WYdSL5CSMpbQ7XhYs9pD2uZHENjENdPjxgZPvekvmIv1VImCimgNi', 'Test', 'User', '+36301234567', 'user', '2026-03-27 11:55:43', '2026-03-29 12:49:16');
+(1, 'admin', 'admin@gmail.com', '$2a$12$syo4yyaAVnt5OHkfF1/dMus4fpFjMVRUn67UP2UiiQmQqhaWpkH0m', 'Admin', NULL, NULL, 'admin', '2026-03-26 22:45:08', '2026-03-31 17:30:01'),
+(2, 'user784', 'user@gmail.com', '$2a$11$WYdSL5CSMpbQ7XhYs9pD2uZHENjENdPjxgZPvekvmIv1VImCimgNi', 'Test', 'User', '+36301234567', 'user', '2026-03-27 11:55:43', '2026-03-31 15:16:56'),
+(9, 'szajzar468', 'szajzar@gmail.com', '$2a$11$GYRUW.CW4aIiBltWYS9qy.pD3d1GCAB6tBn2m53F2TM8GBBCq.7jK', 'Mc', 'Isti', '+36307645599', 'user', '2026-03-28 16:51:41', '2026-03-29 12:44:13'),
+(10, 'apad635', 'apad@gmail.com', '$2a$11$ojstS66sslLnfcpeT2IKtevWA3bgEh0P9vTXb4p13pNZsIywS/hZK', 'apad', 'fasza', '+36213456666', 'user', '2026-03-29 11:09:35', '2026-03-29 11:09:43'),
+(11, 'adj844', 'adj@gmail.com', '$2a$11$YKa0ytNArENScvfseEXx.eM/QbzpGeAqvGgvslW67GZ4K4Qna.uzq', 'adj', 'kedvezmenyt', '+36301112233', 'user', '2026-03-29 11:18:09', '2026-03-29 11:18:18'),
+(12, 'mukodj256', 'mukodj@gmail.com', '$2a$11$rcd4nAVfbEogleI04yTUZOUl3210i3nxO.w1bStTZNnsL6gqPW.qa', 'mukodj', 'legyszi', '+36301233343', 'user', '2026-03-29 11:23:51', '2026-03-29 11:24:00'),
+(13, 'utolso313', 'utolso@gmail.com', '$2a$11$RQZGY/CSn1PvNnr.FAECLOVo7nn8VFrpg10pPvd4tiU38ijXTPGOm', 'utolso', 'esely', '+36301231233', 'user', '2026-03-29 11:30:18', '2026-03-29 11:31:06'),
+(14, 'addide651', 'addide@gmail.com', '$2a$11$G0qgPOjYLQp5qZZD06rc6.vsTA3/NzLV2msoje5hGHv0DuY8PqbCi', 'add', 'ide', '+36701112222', 'user', '2026-03-29 11:46:29', '2026-03-29 11:46:38'),
+(15, 'mostjo847', 'mostjo@gmail.com', '$2a$11$tlDS.ViWlq5Hj9qJA85NUOF.61ro5srn0EqzTubWymT6YtDXQDOO6', 'most', 'jo', '+36301231111', 'user', '2026-03-29 11:52:00', '2026-03-29 11:52:08'),
+(16, 'a147', 'a@gmail.com', '$2a$11$sKvU/U2KZSgkb2zmZpOkuu9bdc/qN.8r2qsehv9.bOGY.FYSdCGwa', 'a', 'a', '+36301111111', 'user', '2026-03-30 18:41:38', '2026-03-30 18:41:45'),
+(17, 'uj447', 'uj@gmail.com', '$2a$11$VvPqyEPZnnn5flBUS1f4Fuxqx/Ho.qrXUzTdoazDwzbY29nnsqdry', 'uj', 'fiok', '+36301111111', 'user', '2026-03-30 22:58:23', '2026-03-30 22:58:30'),
+(18, 'baszom345', 'baszom@gmail.com', '$2a$11$TMJUj8aVq5Cqdero0jvLJOGvRNK1TXi/PJWW4Xhl1mKPlj9H2Fvh.', 'baszom', 'anyad', '+36309998877', 'user', '2026-03-31 17:06:38', '2026-03-31 17:06:46');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -956,13 +1035,6 @@ ALTER TABLE `chat_uzenetek`
   ADD KEY `admin_id` (`admin_id`);
 
 --
--- A tábla indexei `cimek`
---
-ALTER TABLE `cimek`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `idx_user_id` (`user_id`);
-
---
 -- A tábla indexei `jarmuvek`
 --
 ALTER TABLE `jarmuvek`
@@ -983,7 +1055,9 @@ ALTER TABLE `kategoriak`
 --
 ALTER TABLE `kosar`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idx_user_id` (`user_id`);
+  ADD KEY `idx_user_id` (`user_id`),
+  ADD KEY `fk_kosar_alkatresz_id` (`alkatresz_id`),
+  ADD KEY `fk_kosar_olaj_id` (`olaj_id`);
 
 --
 -- A tábla indexei `markak`
@@ -1019,7 +1093,9 @@ ALTER TABLE `rendelesek`
 --
 ALTER TABLE `rendeles_tetelek`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idx_rendeles_id` (`rendeles_id`);
+  ADD KEY `idx_rendeles_id` (`rendeles_id`),
+  ADD KEY `fk_rendeles_tetelek_alkatresz_id` (`alkatresz_id`),
+  ADD KEY `fk_rendeles_tetelek_olaj_id` (`olaj_id`);
 
 --
 -- A tábla indexei `users`
@@ -1037,7 +1113,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `alkatreszek`
 --
 ALTER TABLE `alkatreszek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=217;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=221;
 
 --
 -- AUTO_INCREMENT a táblához `alkatresz_auto`
@@ -1055,13 +1131,7 @@ ALTER TABLE `automodellek`
 -- AUTO_INCREMENT a táblához `chat_uzenetek`
 --
 ALTER TABLE `chat_uzenetek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT a táblához `cimek`
---
-ALTER TABLE `cimek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT a táblához `jarmuvek`
@@ -1079,7 +1149,7 @@ ALTER TABLE `kategoriak`
 -- AUTO_INCREMENT a táblához `kosar`
 --
 ALTER TABLE `kosar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
 -- AUTO_INCREMENT a táblához `markak`
@@ -1103,19 +1173,19 @@ ALTER TABLE `olajok`
 -- AUTO_INCREMENT a táblához `rendelesek`
 --
 ALTER TABLE `rendelesek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT a táblához `rendeles_tetelek`
 --
 ALTER TABLE `rendeles_tetelek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Megkötések a kiírt táblákhoz
@@ -1132,7 +1202,24 @@ ALTER TABLE `chat_uzenetek`
 -- Megkötések a táblához `kosar`
 --
 ALTER TABLE `kosar`
-  ADD CONSTRAINT `fk_kosar_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `fk_kosar_alkatresz_id` FOREIGN KEY (`alkatresz_id`) REFERENCES `alkatreszek` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_kosar_olaj_id` FOREIGN KEY (`olaj_id`) REFERENCES `olajok` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_kosar_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_kosar_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Megkötések a táblához `rendelesek`
+--
+ALTER TABLE `rendelesek`
+  ADD CONSTRAINT `fk_rendelesek_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Megkötések a táblához `rendeles_tetelek`
+--
+ALTER TABLE `rendeles_tetelek`
+  ADD CONSTRAINT `fk_rendeles_tetelek_alkatresz_id` FOREIGN KEY (`alkatresz_id`) REFERENCES `alkatreszek` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_rendeles_tetelek_olaj_id` FOREIGN KEY (`olaj_id`) REFERENCES `olajok` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_rendeles_tetelek_rendeles_id` FOREIGN KEY (`rendeles_id`) REFERENCES `rendelesek` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
