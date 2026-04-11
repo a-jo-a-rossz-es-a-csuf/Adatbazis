@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Már 31. 19:15
--- Kiszolgáló verziója: 10.4.28-MariaDB
--- PHP verzió: 8.2.4
+-- Létrehozás ideje: 2026. Ápr 11. 12:04
+-- Kiszolgáló verziója: 10.4.32-MariaDB
+-- PHP verzió: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -825,7 +825,7 @@ INSERT INTO `olajok` (`id`, `cikkszam`, `nev`, `leiras`, `tipus`, `viszkozitas`,
 (4, 'OLJ-004', 'Total Quartz 9000 5W-40', NULL, 'motorolaj', '5W-40', '5L', 19900.00, NULL, 55, 'Total', 'MB 229.5, VW 502/505', 1, '/images/parts/motorolaj.jpg'),
 (5, 'OLJ-005', 'Liqui Moly Top Tec 4200 5W-30', NULL, 'motorolaj', '5W-30', '5L', 28900.00, 25900.00, 40, 'Liqui Moly', 'BMW LL-04, MB 229.51', 1, '/images/parts/motorolaj.jpg'),
 (6, 'OLJ-006', 'Castrol GTX 10W-40', NULL, 'motorolaj', '10W-40', '5L', 14900.00, NULL, 75, 'Castrol', 'ACEA A3/B4, VW 501/505', 1, '/images/parts/motorolaj.jpg'),
-(7, 'OLJ-007', 'Shell Rimula R6 LME 5W-30', NULL, 'motorolaj', '5W-30', '20L', 89900.00, NULL, 25, 'Shell', 'Teherauto, MB 228.51', 1, '/images/parts/motorolaj.jpg'),
+(7, 'OLJ-007', 'Shell Rimula R6 LME 5W-30', NULL, 'motorolaj', '5W-30', '20L', 89900.00, NULL, 23, 'Shell', 'Teherauto, MB 228.51', 1, '/images/parts/motorolaj.jpg'),
 (8, 'OLJ-008', 'Motul 7100 10W-40', NULL, 'motorolaj', '10W-40', '4L', 18900.00, 16900.00, 48, 'Motul', 'Motorkerekpar 4T', 1, '/images/parts/motorolaj.jpg'),
 (9, 'OLJ-009', 'ATE SL DOT4 fékfolyadék', NULL, 'fékfolyadék', '', '1L', 4900.00, NULL, 80, 'ATE', 'DOT4, FMVSS 116', 1, '/images/parts/uzemanyagszuro.jpg'),
 (10, 'OLJ-010', 'Prestone hűtőfolyadék -38C', NULL, 'hűtőfolyadék', '', '4L', 8900.00, 7900.00, 65, 'Prestone', 'G12+', 1, '/images/parts/vizszivattyu.jpg');
@@ -889,16 +889,17 @@ CREATE TABLE `users` (
   `telefon` varchar(20) DEFAULT NULL,
   `szerepkor` varchar(20) DEFAULT 'user',
   `letrehozva` datetime DEFAULT current_timestamp(),
-  `utolso_belepes` datetime DEFAULT NULL
+  `utolso_belepes` datetime DEFAULT NULL,
+  `ElsoVasarolasKedvezmeny` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `users`
 --
 
-INSERT INTO `users` (`id`, `felhasznalonev`, `email`, `jelszo`, `vezeteknev`, `keresztnev`, `telefon`, `szerepkor`, `letrehozva`, `utolso_belepes`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2a$12$syo4yyaAVnt5OHkfF1/dMus4fpFjMVRUn67UP2UiiQmQqhaWpkH0m', 'Admin', NULL, NULL, 'admin', '2026-03-26 22:45:08', '2026-03-31 18:56:30'),
-(2, 'user784', 'user@gmail.com', '$2a$11$WYdSL5CSMpbQ7XhYs9pD2uZHENjENdPjxgZPvekvmIv1VImCimgNi', 'Test', 'User', '+36301234567', 'user', '2026-03-27 11:55:43', '2026-03-31 15:16:56');
+INSERT INTO `users` (`id`, `felhasznalonev`, `email`, `jelszo`, `vezeteknev`, `keresztnev`, `telefon`, `szerepkor`, `letrehozva`, `utolso_belepes`, `ElsoVasarolasKedvezmeny`) VALUES
+(1, 'admin', 'admin@gmail.com', '$2a$12$syo4yyaAVnt5OHkfF1/dMus4fpFjMVRUn67UP2UiiQmQqhaWpkH0m', 'Admin', NULL, NULL, 'admin', '2026-03-26 22:45:08', '2026-03-31 18:56:30', 0),
+(2, 'user784', 'user@gmail.com', '$2a$11$WYdSL5CSMpbQ7XhYs9pD2uZHENjENdPjxgZPvekvmIv1VImCimgNi', 'Test', 'User', '+36301234567', 'user', '2026-03-27 11:55:43', '2026-04-11 11:50:16', 0);
 
 --
 -- Indexek a kiírt táblákhoz
@@ -1051,7 +1052,7 @@ ALTER TABLE `kategoriak`
 -- AUTO_INCREMENT a táblához `kosar`
 --
 ALTER TABLE `kosar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
 
 --
 -- AUTO_INCREMENT a táblához `markak`
@@ -1075,19 +1076,19 @@ ALTER TABLE `olajok`
 -- AUTO_INCREMENT a táblához `rendelesek`
 --
 ALTER TABLE `rendelesek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT a táblához `rendeles_tetelek`
 --
 ALTER TABLE `rendeles_tetelek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Megkötések a kiírt táblákhoz
