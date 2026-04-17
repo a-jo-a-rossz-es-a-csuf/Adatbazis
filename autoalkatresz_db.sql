@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Ápr 11. 12:04
+-- Létrehozás ideje: 2026. Ápr 17. 22:15
 -- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.1.25
+-- PHP verzió: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -69,11 +69,11 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (19, 'BMW-3F30-FB01', 'Első fékbetét BMW 3-as F30', NULL, 2, 19900.00, NULL, 55, 'TRW', '34116850568', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (20, 'BMW-3F30-FB02', 'Hátsó fékbetét BMW 3-as F30', NULL, 2, 14900.00, NULL, 48, 'ATE', '34216873093', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (21, 'BMW-3F30-FT01', 'Első féktárcsa BMW 3-as F30', NULL, 3, 34900.00, NULL, 20, 'Brembo', '34106859182', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
-(22, 'BMW-3F30-LC01', 'Lengéscsillapító első BMW 3-as F30', NULL, 9, 35900.00, NULL, 12, 'Bilstein', '31316851335', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(22, 'BMW-3F30-LC01', 'Lengéscsillapító első BMW 3-as F30', NULL, 9, 35900.00, NULL, 11, 'Bilstein', '31316851335', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
 (23, 'BMW-3F30-OS01', 'Olajszűrő BMW 3-as F30', NULL, 5, 3490.00, NULL, 95, 'Mann', '11428683196', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (24, 'BMW-3F30-LS01', 'Légszűrő BMW 3-as F30', NULL, 6, 5990.00, NULL, 50, 'K&N', '13718507320', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
 (25, 'BMW-3F30-GY01', 'Gyújtógyertya BMW 3-as F30 4db', NULL, 7, 15900.00, NULL, 55, 'Bosch', '12120039664', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
-(26, 'BMW-3F30-VS01', 'Vízpumpa BMW 3-as F30', NULL, 13, 28900.00, NULL, 18, 'Graf', '11517597715', '/images/parts/vizszivattyu.jpg', 1, '2026-02-18 09:04:44'),
+(26, 'BMW-3F30-VS01', 'Vízpumpa BMW 3-as F30', NULL, 13, 28900.00, NULL, 17, 'Graf', '11517597715', '/images/parts/vizszivattyu.jpg', 1, '2026-02-18 09:04:44'),
 (27, 'BMW-3G20-FB01', 'Első fékbetét BMW 3-as G20', NULL, 2, 22900.00, NULL, 40, 'Brembo', '34106888459', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (28, 'BMW-3G20-FT01', 'Első féktárcsa BMW 3-as G20', NULL, 3, 38900.00, NULL, 18, 'Zimmermann', '34106888457', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (29, 'BMW-3G20-OS01', 'Olajszűrő BMW 3-as G20', NULL, 5, 3990.00, NULL, 70, 'Mann', '11428575211', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
@@ -90,7 +90,7 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (40, 'BMW-5F10-FT01', 'Első féktárcsa BMW 5-ös F10', NULL, 3, 42900.00, NULL, 16, 'Zimmermann', '34116794429', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (41, 'BMW-5F10-LC01', 'Lengéscsillapító első BMW 5-ös F10', NULL, 9, 38900.00, NULL, 12, 'Sachs', '31316789363', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
 (42, 'BMW-5F10-OS01', 'Olajszűrő BMW 5-ös F10', NULL, 5, 3590.00, NULL, 78, 'Mann', '11428683196', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
-(43, 'BMW-5F10-GY01', 'Gyújtógyertya BMW 5-ös F10 6db', NULL, 7, 23900.00, NULL, 35, 'NGK', '12120039664', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
+(43, 'BMW-5F10-GY01', 'Gyújtógyertya BMW 5-ös F10 6db', NULL, 7, 23900.00, NULL, 34, 'NGK', '12120039664', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
 (44, 'BMW-X5G05-FB01', 'Első fékbetét BMW X5 G05', NULL, 2, 32900.00, NULL, 25, 'Brembo', '34106888459', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (45, 'BMW-X5G05-FT01', 'Első féktárcsa BMW X5 G05', NULL, 3, 54900.00, NULL, 14, 'Brembo', '34106888457', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (46, 'BMW-X5G05-OS01', 'Olajszűrő BMW X5 G05', NULL, 5, 4290.00, NULL, 55, 'Mann', '11428575211', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
@@ -109,14 +109,14 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (59, 'AUDI-A4B8-OS01', 'Olajszűrő Audi A4 B8', NULL, 5, 3290.00, NULL, 88, 'Mann', '06L115562', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (60, 'AUDI-A4B8-LS01', 'Légszűrő Audi A4 B8', NULL, 6, 4990.00, NULL, 52, 'Mahle', '8K0133843', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
 (61, 'AUDI-A4B8-GY01', 'Gyújtógyertya Audi A4 B8 4db', NULL, 7, 14900.00, NULL, 48, 'NGK', '06H905611', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
-(62, 'AUDI-A4B9-FB01', 'Első fékbetét Audi A4 B9', NULL, 2, 21900.00, NULL, 40, 'Brembo', '8W0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(62, 'AUDI-A4B9-FB01', 'Első fékbetét Audi A4 B9', NULL, 2, 21900.00, NULL, 39, 'Brembo', '8W0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (63, 'AUDI-A4B9-FT01', 'Első féktárcsa Audi A4 B9', NULL, 3, 36900.00, NULL, 20, 'Zimmermann', '8W0615301', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (64, 'AUDI-A4B9-OS01', 'Olajszűrő Audi A4 B9', NULL, 5, 3590.00, NULL, 82, 'Mann', '06L115562B', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (65, 'AUDI-A4B9-LS01', 'Légszűrő Audi A4 B9', NULL, 6, 5290.00, NULL, 48, 'K&N', '8W0133843', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
-(66, 'AUDI-A6C7-FB01', 'Első fékbetét Audi A6 C7', NULL, 2, 24900.00, NULL, 35, 'TRW', '4G0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
-(67, 'AUDI-A6C7-FT01', 'Első féktárcsa Audi A6 C7', NULL, 3, 42900.00, NULL, 18, 'Brembo', '4G0615301H', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(66, 'AUDI-A6C7-FB01', 'Első fékbetét Audi A6 C7', NULL, 2, 24900.00, NULL, 34, 'TRW', '4G0698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(67, 'AUDI-A6C7-FT01', 'Első féktárcsa Audi A6 C7', NULL, 3, 42900.00, NULL, 17, 'Brembo', '4G0615301H', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (68, 'AUDI-A6C7-LC01', 'Lengéscsillapító első Audi A6 C7', NULL, 9, 38900.00, NULL, 14, 'Sachs', '4G0413031', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
-(69, 'AUDI-A6C7-OS01', 'Olajszűrő Audi A6 C7', NULL, 5, 3890.00, NULL, 72, 'Mann', '06E115562H', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
+(69, 'AUDI-A6C7-OS01', 'Olajszűrő Audi A6 C7', NULL, 5, 3890.00, NULL, 71, 'Mann', '06E115562H', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (70, 'AUDI-Q5FY-FB01', 'Első fékbetét Audi Q5 FY', NULL, 2, 26900.00, NULL, 32, 'Brembo', '80A698151', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (71, 'AUDI-Q5FY-FT01', 'Első féktárcsa Audi Q5 FY', NULL, 3, 48900.00, NULL, 16, 'Zimmermann', '80A615301', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (72, 'AUDI-Q5FY-OS01', 'Olajszűrő Audi Q5 FY', NULL, 5, 4190.00, NULL, 65, 'Mann', '06L115562', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
@@ -127,10 +127,10 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (77, 'MB-CW205-FB01', 'Első fékbetét Mercedes C W205', NULL, 2, 22900.00, NULL, 38, 'Brembo', 'A0004207800', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (78, 'MB-CW205-FB02', 'Hátsó fékbetét Mercedes C W205', NULL, 2, 18900.00, NULL, 35, 'ATE', 'A0004207900', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (79, 'MB-CW205-FT01', 'Első féktárcsa Mercedes C W205', NULL, 3, 38900.00, NULL, 20, 'Zimmermann', 'A2054210012', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
-(80, 'MB-CW205-LC01', 'Lengéscsillapító első Mercedes C W205', NULL, 9, 35900.00, NULL, 14, 'Sachs', 'A2053200030', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
+(80, 'MB-CW205-LC01', 'Lengéscsillapító első Mercedes C W205', NULL, 9, 35900.00, NULL, 13, 'Sachs', 'A2053200030', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
 (81, 'MB-CW205-OS01', 'Olajszűrő Mercedes C W205', NULL, 5, 3590.00, NULL, 78, 'Mann', 'A2701800109', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (82, 'MB-CW205-LS01', 'Légszűrő Mercedes C W205', NULL, 6, 5290.00, NULL, 50, 'Mahle', 'A2740940004', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
-(83, 'MB-CW205-GY01', 'Gyújtógyertya Mercedes C W205 4db', NULL, 7, 16900.00, NULL, 42, 'Bosch', 'A0041596403', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
+(83, 'MB-CW205-GY01', 'Gyújtógyertya Mercedes C W205 4db', NULL, 7, 16900.00, NULL, 41, 'Bosch', 'A0041596403', '/images/parts/gyujtagyertya.jpg', 1, '2026-02-18 09:04:44'),
 (84, 'MB-EW213-FB01', 'Első fékbetét Mercedes E W213', NULL, 2, 26900.00, NULL, 32, 'TRW', 'A0004208400', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (85, 'MB-EW213-FT01', 'Első féktárcsa Mercedes E W213', NULL, 3, 46900.00, NULL, 18, 'Brembo', 'A2134210012', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (86, 'MB-EW213-LC01', 'Lengéscsillapító első Mercedes E W213', NULL, 9, 42900.00, NULL, 12, 'Bilstein', 'A2133200030', '/images/parts/lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
@@ -139,7 +139,7 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (89, 'MB-GLCX253-FT01', 'Első féktárcsa Mercedes GLC X253', NULL, 3, 52900.00, NULL, 15, 'Zimmermann', 'A2534210012', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (90, 'MB-GLCX253-OS01', 'Olajszűrő Mercedes GLC X253', NULL, 5, 4290.00, NULL, 62, 'Mann', 'A2761800009', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (91, 'MAN-TGX-FB01', 'Első fékbetét MAN TGX', NULL, 14, 45900.00, NULL, 25, 'Knorr-Bremse', '81508206086', '/images/parts/teher_fekbetet.jpg', 1, '2026-02-18 09:04:44'),
-(92, 'MAN-TGX-FT01', 'Féktárcsa MAN TGX', NULL, 14, 89900.00, NULL, 18, 'Wabco', '81508030038', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(92, 'MAN-TGX-FT01', 'Féktárcsa MAN TGX', NULL, 14, 89900.00, NULL, 17, 'Wabco', '81508030038', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (93, 'MAN-TGX-OS01', 'Olajszűrő MAN TGX D26', NULL, 14, 8900.00, NULL, 45, 'Mann', '51055040107', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (94, 'MAN-TGX-LS01', 'Légszűrő MAN TGX', NULL, 14, 12900.00, NULL, 38, 'Mahle', '81084050020', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
 (95, 'MAN-TGX-US01', 'Üzemanyagszűrő MAN TGX', NULL, 14, 9900.00, NULL, 50, 'Mann', '51125030066', '/images/parts/uzemanyagszuro.jpg', 1, '2026-02-18 09:04:44'),
@@ -151,7 +151,7 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (101, 'SCAN-R-OS01', 'Olajszűrő Scania R DC13', NULL, 14, 9900.00, NULL, 40, 'Mann', '2022275', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (102, 'SCAN-R-LS01', 'Légszűrő Scania R', NULL, 14, 14900.00, NULL, 35, 'Mahle', '1869993', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
 (103, 'SCAN-R-US01', 'Üzemanyagszűrő Scania R', NULL, 14, 11900.00, NULL, 42, 'Mann', '1873018', '/images/parts/uzemanyagszuro.jpg', 1, '2026-02-18 09:04:44'),
-(104, 'SCAN-S-FB01', 'Első fékbetét Scania S', NULL, 14, 52900.00, NULL, 20, 'Knorr-Bremse', '2195220', '/images/parts/teher_fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(104, 'SCAN-S-FB01', 'Első fékbetét Scania S', NULL, 14, 52900.00, NULL, 18, 'Knorr-Bremse', '2195220', '/images/parts/teher_fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (105, 'SCAN-S-LC01', 'Lengéscsillapító Scania S', NULL, 14, 72900.00, NULL, 12, 'Sachs', '2195110', '/images/parts/teher_lengescsillapito.jpg', 1, '2026-02-18 09:04:44'),
 (106, 'HON-CBR6-FB01', 'Első fékbetét Honda CBR600RR', NULL, 15, 18900.00, NULL, 30, 'EBC', '06455-MFJ-D01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (107, 'HON-CBR6-FT01', 'Első féktárcsa Honda CBR600RR', NULL, 15, 32900.00, NULL, 18, 'Brembo', '45120-MFJ-D01', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
@@ -162,7 +162,7 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (112, 'HON-CBR10-OS01', 'Olajszűrő Honda CBR1000RR', NULL, 15, 2890.00, NULL, 58, 'HiFlo', '15410-MKF-D01', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (113, 'HON-CB5-FB01', 'Első fékbetét Honda CB500F', NULL, 15, 12900.00, NULL, 38, 'EBC', '06455-MGZ-J01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (114, 'HON-CB5-OS01', 'Olajszűrő Honda CB500F', NULL, 15, 1990.00, NULL, 72, 'HiFlo', '15410-MGZ-D01', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
-(115, 'HON-AFT-FB01', 'Első fékbetét Honda Africa Twin', NULL, 15, 16900.00, NULL, 32, 'EBC', '06455-MKK-D01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
+(115, 'HON-AFT-FB01', 'Első fékbetét Honda Africa Twin', NULL, 15, 16900.00, NULL, 31, 'EBC', '06455-MKK-D01', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (116, 'HON-AFT-OS01', 'Olajszűrő Honda Africa Twin', NULL, 15, 2690.00, NULL, 55, 'HiFlo', '15410-MKK-D01', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (117, 'HON-AFT-LS01', 'Légszűrő Honda Africa Twin', NULL, 15, 5490.00, NULL, 40, 'K&N', '17210-MKK-D00', '/images/parts/legszuro.jpg', 1, '2026-02-18 09:04:44'),
 (118, 'YAM-R6-FB01', 'Első fékbetét Yamaha YZF-R6', NULL, 15, 19900.00, NULL, 28, 'EBC', '2C0-W0045-00', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
@@ -174,13 +174,13 @@ INSERT INTO `alkatreszek` (`id`, `cikkszam`, `nev`, `leiras`, `kategoria_id`, `a
 (124, 'YAM-MT7-FB01', 'Első fékbetét Yamaha MT-07', NULL, 15, 14900.00, NULL, 35, 'EBC', '1WS-W0045-00', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
 (125, 'YAM-MT7-OS01', 'Olajszűrő Yamaha MT-07', NULL, 15, 1890.00, NULL, 70, 'HiFlo', '5GH-13440-30', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (126, 'YAM-MT9-FB01', 'Első fékbetét Yamaha MT-09', NULL, 15, 16900.00, NULL, 32, 'EBC', 'B4C-W0045-00', '/images/parts/fekbetet.jpg', 1, '2026-02-18 09:04:44'),
-(127, 'YAM-MT9-FT01', 'Első féktárcsa Yamaha MT-09', NULL, 15, 29900.00, NULL, 20, 'Brembo', 'B4C-2581T-00', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
+(127, 'YAM-MT9-FT01', 'Első féktárcsa Yamaha MT-09', NULL, 15, 29900.00, NULL, 19, 'Brembo', 'B4C-2581T-00', '/images/parts/fektarcsa.jpg', 1, '2026-02-18 09:04:44'),
 (128, 'YAM-MT9-OS01', 'Olajszűrő Yamaha MT-09', NULL, 15, 2190.00, NULL, 65, 'HiFlo', '5GH-13440-40', '/images/parts/olajszuro.jpg', 1, '2026-02-18 09:04:44'),
 (129, 'BMW-5G30-FB01', 'Első fékbetét BMW 5-ös G30', NULL, 2, 26900.00, NULL, 35, 'Brembo', '34106888459', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:45'),
 (130, 'BMW-5G30-FT01', 'Első féktárcsa BMW 5-ös G30', NULL, 3, 48900.00, NULL, 18, 'Zimmermann', '34106888457', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:45'),
 (131, 'BMW-5G30-OS01', 'Olajszűrő BMW 5-ös G30', NULL, 5, 4290.00, NULL, 65, 'Mann', '11428575211', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:45'),
 (132, 'BMW-5G30-LS01', 'Légszűrő BMW 5-ös G30', NULL, 6, 6990.00, NULL, 40, 'Mahle', '13718577171', '/images/parts/legszuro.jpg', 1, '2026-02-26 10:15:45'),
-(133, 'BMW-X3E83-FB01', 'Első fékbetét BMW X3 E83', NULL, 2, 18900.00, NULL, 30, 'TRW', '34113404362', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:45'),
+(133, 'BMW-X3E83-FB01', 'Első fékbetét BMW X3 E83', NULL, 2, 18900.00, NULL, 27, 'TRW', '34113404362', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:45'),
 (134, 'BMW-X3E83-FT01', 'Első féktárcsa BMW X3 E83', NULL, 3, 32900.00, NULL, 20, 'Brembo', '34113400151', '/images/parts/fektarcsa.jpg', 1, '2026-02-26 10:15:45'),
 (135, 'BMW-X3E83-OS01', 'Olajszűrő BMW X3 E83', NULL, 5, 3290.00, NULL, 70, 'Mann', '11427566327', '/images/parts/olajszuro.jpg', 1, '2026-02-26 10:15:45'),
 (136, 'BMW-X3F25-FB01', 'Első fékbetét BMW X3 F25', NULL, 2, 22900.00, NULL, 35, 'Brembo', '34116851269', '/images/parts/fekbetet.jpg', 1, '2026-02-26 10:15:45'),
@@ -581,6 +581,13 @@ CREATE TABLE `chat_uzenetek` (
   `valaszolva` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `chat_uzenetek`
+--
+
+INSERT INTO `chat_uzenetek` (`id`, `user_id`, `uzenet`, `admin_valasz`, `admin_id`, `statusz`, `letrehozva`, `valaszolva`) VALUES
+(18, 2, 'Szép napot! Mennyi a szállítási idő?', 'Üdv! 3 munkanap.', 1, 'megvalaszolva', '2026-04-17 22:07:37', '2026-04-17 22:08:57');
+
 -- --------------------------------------------------------
 
 --
@@ -819,16 +826,16 @@ CREATE TABLE `olajok` (
 --
 
 INSERT INTO `olajok` (`id`, `cikkszam`, `nev`, `leiras`, `tipus`, `viszkozitas`, `kiszereles`, `ar`, `akcios_ar`, `keszlet`, `gyarto`, `specifikacio`, `aktiv`, `kep_url`) VALUES
-(1, 'OLJ-001', 'Castrol EDGE 5W-30 LL', NULL, 'motorolaj', '5W-30', '5L', 24900.00, 21900.00, 50, 'Castrol', 'BMW LL-04, MB 229.51, VW 504/507', 1, '/images/parts/motorolaj.jpg'),
-(2, 'OLJ-002', 'Mobil 1 ESP 5W-30', NULL, 'motorolaj', '5W-30', '5L', 26900.00, NULL, 45, 'Mobil', 'BMW LL-04, MB 229.52, VW 504/507', 1, '/images/parts/motorolaj.jpg'),
+(1, 'OLJ-001', 'Castrol EDGE 5W-30 LL', NULL, 'motorolaj', '5W-30', '5L', 24900.00, 21900.00, 47, 'Castrol', 'BMW LL-04, MB 229.51, VW 504/507', 1, '/images/parts/motorolaj.jpg'),
+(2, 'OLJ-002', 'Mobil 1 ESP 5W-30', NULL, 'motorolaj', '5W-30', '5L', 26900.00, NULL, 44, 'Mobil', 'BMW LL-04, MB 229.52, VW 504/507', 1, '/images/parts/motorolaj.jpg'),
 (3, 'OLJ-003', 'Shell Helix Ultra 5W-40', NULL, 'motorolaj', '5W-40', '5L', 22900.00, 19900.00, 60, 'Shell', 'MB 229.5, VW 502/505, BMW LL-01', 1, '/images/parts/motorolaj.jpg'),
 (4, 'OLJ-004', 'Total Quartz 9000 5W-40', NULL, 'motorolaj', '5W-40', '5L', 19900.00, NULL, 55, 'Total', 'MB 229.5, VW 502/505', 1, '/images/parts/motorolaj.jpg'),
 (5, 'OLJ-005', 'Liqui Moly Top Tec 4200 5W-30', NULL, 'motorolaj', '5W-30', '5L', 28900.00, 25900.00, 40, 'Liqui Moly', 'BMW LL-04, MB 229.51', 1, '/images/parts/motorolaj.jpg'),
-(6, 'OLJ-006', 'Castrol GTX 10W-40', NULL, 'motorolaj', '10W-40', '5L', 14900.00, NULL, 75, 'Castrol', 'ACEA A3/B4, VW 501/505', 1, '/images/parts/motorolaj.jpg'),
-(7, 'OLJ-007', 'Shell Rimula R6 LME 5W-30', NULL, 'motorolaj', '5W-30', '20L', 89900.00, NULL, 23, 'Shell', 'Teherauto, MB 228.51', 1, '/images/parts/motorolaj.jpg'),
+(6, 'OLJ-006', 'Castrol GTX 10W-40', NULL, 'motorolaj', '10W-40', '5L', 14900.00, NULL, 74, 'Castrol', 'ACEA A3/B4, VW 501/505', 1, '/images/parts/motorolaj.jpg'),
+(7, 'OLJ-007', 'Shell Rimula R6 LME 5W-30', NULL, 'motorolaj', '5W-30', '20L', 89900.00, NULL, 21, 'Shell', 'Teherauto, MB 228.51', 1, '/images/parts/motorolaj.jpg'),
 (8, 'OLJ-008', 'Motul 7100 10W-40', NULL, 'motorolaj', '10W-40', '4L', 18900.00, 16900.00, 48, 'Motul', 'Motorkerekpar 4T', 1, '/images/parts/motorolaj.jpg'),
-(9, 'OLJ-009', 'ATE SL DOT4 fékfolyadék', NULL, 'fékfolyadék', '', '1L', 4900.00, NULL, 80, 'ATE', 'DOT4, FMVSS 116', 1, '/images/parts/uzemanyagszuro.jpg'),
-(10, 'OLJ-010', 'Prestone hűtőfolyadék -38C', NULL, 'hűtőfolyadék', '', '4L', 8900.00, 7900.00, 65, 'Prestone', 'G12+', 1, '/images/parts/vizszivattyu.jpg');
+(9, 'OLJ-009', 'ATE SL DOT4 fékfolyadék', NULL, 'fékfolyadék', '', '1L', 4900.00, NULL, 77, 'ATE', 'DOT4, FMVSS 116', 1, '/images/parts/uzemanyagszuro.jpg'),
+(10, 'OLJ-010', 'Prestone hűtőfolyadék -38C', NULL, 'hűtőfolyadék', '', '4L', 8900.00, 7900.00, 58, 'Prestone', 'G12+', 1, '/images/parts/vizszivattyu.jpg');
 
 -- --------------------------------------------------------
 
@@ -856,6 +863,14 @@ CREATE TABLE `rendelesek` (
   `letrehozva` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `rendelesek`
+--
+
+INSERT INTO `rendelesek` (`id`, `user_id`, `rendeles_szam`, `statusz`, `nev`, `email`, `telefon`, `iranyitoszam`, `varos`, `utca`, `hazszam`, `megjegyzes`, `osszeg`, `szallitasi_dij`, `vegosszeg`, `fizetesi_mod`, `letrehozva`) VALUES
+(55, 2, 'R-1776456163872', 'teljesitve', 'Test User', 'user@gmail.com', '+36301234567', '1111', 'Budapest', 'Rákóczi u. 2', '', '', 59700.00, 1490.00, 61190.00, 'utanvet', '2026-04-17 22:02:43'),
+(56, 2, 'R-1776456321165', 'fuggoben', 'Test User', 'user@gmail.com', '+36309876543', '1112', 'Budapest', 'Rákóczi u. 27', '', '', 81490.00, 1490.00, 82980.00, 'utanvet', '2026-04-17 22:05:21');
+
 -- --------------------------------------------------------
 
 --
@@ -872,6 +887,19 @@ CREATE TABLE `rendeles_tetelek` (
   `egysegar` decimal(10,2) NOT NULL,
   `osszeg` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `rendeles_tetelek`
+--
+
+INSERT INTO `rendeles_tetelek` (`id`, `rendeles_id`, `alkatresz_id`, `olaj_id`, `termek_nev`, `mennyiseg`, `egysegar`, `osszeg`) VALUES
+(64, 55, NULL, 10, 'Prestone hűtőfolyadék -38C', 1, 8900.00, 8900.00),
+(65, 55, NULL, 6, 'Castrol GTX 10W-40', 1, 14900.00, 14900.00),
+(66, 55, 80, NULL, 'Lengéscsillapító első Mercedes C W205', 1, 35900.00, 35900.00),
+(67, 56, 67, NULL, 'Első féktárcsa Audi A6 C7', 1, 42900.00, 42900.00),
+(68, 56, NULL, 9, 'ATE SL DOT4 fékfolyadék', 2, 4900.00, 9800.00),
+(69, 56, 66, NULL, 'Első fékbetét Audi A6 C7', 1, 24900.00, 24900.00),
+(70, 56, 69, NULL, 'Olajszűrő Audi A6 C7', 1, 3890.00, 3890.00);
 
 -- --------------------------------------------------------
 
@@ -898,8 +926,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `felhasznalonev`, `email`, `jelszo`, `vezeteknev`, `keresztnev`, `telefon`, `szerepkor`, `letrehozva`, `utolso_belepes`, `ElsoVasarolasKedvezmeny`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2a$12$syo4yyaAVnt5OHkfF1/dMus4fpFjMVRUn67UP2UiiQmQqhaWpkH0m', 'Admin', NULL, NULL, 'admin', '2026-03-26 22:45:08', '2026-03-31 18:56:30', 0),
-(2, 'user784', 'user@gmail.com', '$2a$11$WYdSL5CSMpbQ7XhYs9pD2uZHENjENdPjxgZPvekvmIv1VImCimgNi', 'Test', 'User', '+36301234567', 'user', '2026-03-27 11:55:43', '2026-04-11 11:50:16', 0);
+(1, 'admin', 'admin@gmail.com', '$2a$12$syo4yyaAVnt5OHkfF1/dMus4fpFjMVRUn67UP2UiiQmQqhaWpkH0m', 'Admin', NULL, NULL, 'admin', '2026-03-26 22:45:08', '2026-04-17 22:08:13', 1),
+(2, 'user784', 'user@gmail.com', '$2a$11$WYdSL5CSMpbQ7XhYs9pD2uZHENjENdPjxgZPvekvmIv1VImCimgNi', 'Test', 'User', '+36301234567', 'user', '2026-03-27 11:55:43', '2026-04-17 21:57:39', 0);
 
 --
 -- Indexek a kiírt táblákhoz
@@ -1016,7 +1044,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `alkatreszek`
 --
 ALTER TABLE `alkatreszek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=222;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=225;
 
 --
 -- AUTO_INCREMENT a táblához `alkatresz_auto`
@@ -1034,7 +1062,7 @@ ALTER TABLE `automodellek`
 -- AUTO_INCREMENT a táblához `chat_uzenetek`
 --
 ALTER TABLE `chat_uzenetek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT a táblához `jarmuvek`
@@ -1052,7 +1080,7 @@ ALTER TABLE `kategoriak`
 -- AUTO_INCREMENT a táblához `kosar`
 --
 ALTER TABLE `kosar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
 
 --
 -- AUTO_INCREMENT a táblához `markak`
@@ -1076,19 +1104,19 @@ ALTER TABLE `olajok`
 -- AUTO_INCREMENT a táblához `rendelesek`
 --
 ALTER TABLE `rendelesek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT a táblához `rendeles_tetelek`
 --
 ALTER TABLE `rendeles_tetelek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Megkötések a kiírt táblákhoz
